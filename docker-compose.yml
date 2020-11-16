@@ -1,0 +1,10 @@
+version: "3"
+services:
+  rust:
+    image: rust:1.47
+    volumes:
+      - .:/opt/rustapp
+    environment:
+      - USER=`${USER}`
+    working_dir: /opt/rustapp
+    stdin_open: true
