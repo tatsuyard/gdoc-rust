@@ -1,12 +1,16 @@
 fn main() {
-    let mut s = String::from("hello world");
+    let my_string = String::from("hello world");
 
-    let word = first_word(&s); // wordの中身は、値5になる
+    let word = first_word(&my_string[..]);
 
-    s.clear(); // Stringを空にする。つまり、""と等しくする  
+    let my_string_literal = "hello world";
+
+    let word = first_word(&my_string_literal[..]);
+
+    let word = first_word(my_string_literal);
 }
 
-fn first_word(s: &String) -> &str {
+fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
