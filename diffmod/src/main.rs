@@ -4,7 +4,7 @@ enum TrafficLight {
     Green,
 }
 
-use TrafficLight::{Red, Yellow};
+use TrafficLight::*;
 
 fn main() {
     let red = Red;
