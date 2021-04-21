@@ -24,18 +24,18 @@ async fn get_dirves() {
         panic!("empty token is not valid");
     }
 
-    println!("{:?}", token);
-    // let drive_client = GoogleDrive::new(token);
+    let drive_client = GoogleDrive::new(token);
 
-    // let drives = drive_client.list_drives().await.unwrap();
-    // for drive in drives {
-    //     println!("{:?}", drive);
-    // }
+    let drives = drive_client.list_drives().await.unwrap();
+    for drive in drives {
+        println!("{:?}", drive);
+    }
 }
 
 fn main() {
     dotenv().ok();
 
     get_dirves();
+    println!("@@@@@");
 
 }
