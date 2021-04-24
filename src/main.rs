@@ -33,9 +33,10 @@ async fn get_dirves() {
     }
 }
 
-fn main() {
+#[tokio::main]
+async fn main() {
     dotenv().ok();
 
-    get_dirves();
+    get_dirves().await;
 
 }
