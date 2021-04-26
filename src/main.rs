@@ -38,5 +38,4 @@ async fn main() {
     dotenv().ok();
 
     get_dirves().await;
-
 }
