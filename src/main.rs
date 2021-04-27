@@ -28,8 +28,7 @@ async fn get_dirves() {
 
     let drives = drive_client.list_drives().await.unwrap();
     for drive in drives {
-        println!("{:?}", drive);
-        
+        println!("{:?}", drive);      
     }
 }
 
