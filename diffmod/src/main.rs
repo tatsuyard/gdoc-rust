@@ -6,7 +6,7 @@ fn main() {
     println!("The longest magic word is {}", result);
 }
 
-fn longest_word(x: &String, y: &String) -> &String {
+fn longest_word<'a>(x: &'a String, y: &'a String) -> &'a String {
     if x.len() > y.len() {
         x
     } else {
