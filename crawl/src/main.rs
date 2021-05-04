@@ -7,8 +7,9 @@ fn main() -> eyre::Result<()> {
     // println!("body = {:?}", body);
     let doc = Document::from(body.as_str());
     use select::predicate::Name;
+    use url::Url;
     for href in doc.find(Name("a")).filter_map(|a| a.attr("href")) {
-        println!("{:?}", href);
+        println!("{:?}", Url::parse(href));
     }
     Ok(())
 }
