@@ -9,7 +9,14 @@ fn main() -> eyre::Result<()> {
     use select::predicate::Name;
     use url::Url;
     for href in doc.find(Name("a")).filter_map(|a| a.attr("href")) {
-        println!("{:?}", Url::parse(href));
+        // println!("{:?}", Url::parse(href));
+        match Url::parse(href) {
+            Ok(url) => { println!("{}", url); },
+            Err(UrlParseError::RelativeUrlWithoutBase) => {
+
+            },
+            Err(e) => {},
+        }
     }
     Ok(())
 }
