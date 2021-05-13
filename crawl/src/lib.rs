@@ -14,4 +14,8 @@ impl LinkExtractor {
 
 pub fn get_links(&self, url: Url) -> Reault<Vec<Url>, eyre::Report> {
     let reponse = self.client.get(url)?;
+    let base_url = response.url().clone();
+    let body = response.text()?;
+    let doc = Document::from(body.as_str());
+    let mut links = Vec::new();
 }
