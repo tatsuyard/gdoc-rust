@@ -1,4 +1,6 @@
 use reqwest::blocking::Client;
+use select::document::Document;
+use url::Url;
 
 pub struct LinkExtractor {
     client: Client,
@@ -12,13 +14,14 @@ impl LinkExtractor {
     }
 }
 
-pub fn get_links(&self, url: Url) -> Reault<Vec<Url>, eyre::Report> {
-    let reponse = self.client.get(url).send()?;
+pub fn get_links(&self, url: Url) -> Result<Vec<Url>, eyre::Report> {
+    let response = self.client.get(url).send()?;
     let base_url = response.url().clone();
     let body = response.text()?;
     let doc = Document::from(body.as_str());
+    use select::predicate::Name;
     let mut links = Vec::new();
-    use url::Url;
+    
     for href in doc.find(Name("a")).filter_map(|a| a.attr("href")) {
         use url::ParseError as UrlParseError;
         // println!("{:?}", Url::parse(href));
@@ -31,5 +34,5 @@ pub fn get_links(&self, url: Url) -> Reault<Vec<Url>, eyre::Report> {
             Err(e) => {},
         }
     }
-    Ok(())
+    Ok(links)
 }
