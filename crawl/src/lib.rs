@@ -1,6 +1,7 @@
 use reqwest::blocking::Client;
 use select::document::Document;
 use url::Url;
+use log::{info}
 
 pub struct LinkExtractor {
     client: Client,
@@ -12,8 +13,9 @@ impl LinkExtractor {
             client: client,
         }
     }
-    
+
     pub fn get_links(&self, url: Url) -> Result<Vec<Url>, eyre::Report> {
+        log::info!("GET \"{}\"", url);
         let response = self.client.get(url).send()?;
         let base_url = response.url().clone();
         let body = response.text()?;
