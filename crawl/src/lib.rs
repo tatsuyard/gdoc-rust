@@ -1,7 +1,7 @@
 use reqwest::blocking::Client;
 use select::document::Document;
 use url::Url;
-use log::{info}
+use log::{info};
 
 pub struct LinkExtractor {
     client: Client,
@@ -22,7 +22,8 @@ impl LinkExtractor {
         let doc = Document::from(body.as_str());
         use select::predicate::Name;
         let mut links = Vec::new();
-        
+        log::info!("Retrieved {} \"{}\"", status, base_url);
+
         for href in doc.find(Name("a")).filter_map(|a| a.attr("href")) {
             use url::ParseError as UrlParseError;
             // println!("{:?}", Url::parse(href));
