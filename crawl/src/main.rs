@@ -5,7 +5,12 @@ use crawl::LinkExtractor;
 
 fn main() -> eyre::Result<()> {
     env_logger::init();
-    let url = Url::parse("https://www.rust-lang.org")?;
+    
+    let url = std::env::args()
+    .nth(1)
+    .unwrap_or("https://www.rust-lang.org".to_owned());
+
+    let url = Url::parse(&url)?;
     let client = ClientBuilder::new().build()?;
     let extractor = LinkExtractor::from_client(client);
     let links = extractor.get_links(url)?;
