@@ -1,7 +1,7 @@
 use reqwest::blocking::Client;
 use select::document::Document;
 use url::Url;
-use log::{info};
+use log;
 
 pub struct LinkExtractor {
     client: Client,
@@ -18,6 +18,7 @@ impl LinkExtractor {
         log::info!("GET \"{}\"", url);
         let response = self.client.get(url).send()?;
         let base_url = response.url().clone();
+        let status = response.status();
         let body = response.text()?;
         let doc = Document::from(body.as_str());
         use select::predicate::Name;
