@@ -3,6 +3,12 @@ use select::document::Document;
 use url::Url;
 use log;
 
+pub enum GetLinksError {
+    SendRequest,
+    ResponseBody,
+    AbsolutizeUrk
+}
+
 pub struct LinkExtractor {
     client: Client,
 }

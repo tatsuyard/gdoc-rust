@@ -13,6 +13,7 @@ fn main() -> eyre::Result<()> {
     let url = Url::parse(&url)?;
     let client = ClientBuilder::new().build()?;
     let extractor = LinkExtractor::from_client(client);
+    
     let links = extractor.get_links(url)?;
     for link in links.iter() {
         println!("{}", link);
