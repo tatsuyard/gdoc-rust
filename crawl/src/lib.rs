@@ -2,10 +2,15 @@ use reqwest::blocking::Client;
 use select::document::Document;
 use url::Url;
 use log;
+use thiserror::Error;
 
+#[derive(Error,Debug)]
 pub enum GetLinksError {
+    #[error("Failed to send a request")]
     SendRequest,
+    #[error("Failed to read the response body")]
     ResponseBody,
+    #[error("Failed to make the link URL absolute")]
     AbsolutizeUrk
 }
 
