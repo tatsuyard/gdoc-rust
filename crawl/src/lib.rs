@@ -7,11 +7,11 @@ use thiserror::Error;
 #[derive(Error,Debug)]
 pub enum GetLinksError {
     #[error("Failed to send a request")]
-    SendRequest,
+    SendRequest(#[source] reqwest::Error),
     #[error("Failed to read the response body")]
-    ResponseBody,
+    ResponseBody(#[source] reqwest::Error),
     #[error("Failed to make the link URL absolute")]
-    AbsolutizeUrk
+    AbsolutizeUrl(#[source] url::ParseError),
 }
 
 pub struct LinkExtractor {
