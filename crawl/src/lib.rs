@@ -27,7 +27,8 @@ impl LinkExtractor {
 
     pub fn get_links(&self, url: Url) -> Result<Vec<Url>, eyre::Report> {
         log::info!("GET \"{}\"", url);
-        let response = self.client.get(url).send()?;
+        let response = self.client.get(url).send()
+        .map_err(|e| GetLinksError::SendRequest(e))?;
         let base_url = response.url().clone();
         let status = response.status();
         let body = response.text()?;
