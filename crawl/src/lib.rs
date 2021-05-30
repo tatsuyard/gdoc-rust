@@ -12,6 +12,8 @@ pub enum GetLinksError {
     ResponseBody(#[source] reqwest::Error),
     #[error("Failed to make the link URL absolute")]
     AbsolutizeUrl(#[source] url::ParseError),
+    #[error("Server returned an error")]
+    ServerError(#[source] reqwest::Error),
 }
 
 pub struct LinkExtractor {
