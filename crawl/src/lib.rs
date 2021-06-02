@@ -46,7 +46,10 @@ impl LinkExtractor {
             use url::ParseError as UrlParseError;
             // println!("{:?}", Url::parse(href));
             match Url::parse(href) {
-                Ok(url) => { println!("{}", url); },
+                Ok(mut url) => { 
+                    url.set_fragment(None);
+                    links.push(url);
+                },
                 Err(UrlParseError::RelativeUrlWithoutBase) => {
                     let url = base_url.join(href)?;
                     println!("{}", url);
