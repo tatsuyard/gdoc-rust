@@ -54,7 +54,9 @@ impl LinkExtractor {
                     let url = base_url.join(href)?;
                     println!("{}", url);
                 },
-                Err(e) => {},
+                Err(e) => {
+                    log::warn!("URL parse error: {}", e);
+                },
             }
         }
         Ok(links)
