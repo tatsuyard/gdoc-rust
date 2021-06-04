@@ -62,3 +62,5 @@ impl LinkExtractor {
         Ok(links)
     }
 }
+
+pub mod crawler;
