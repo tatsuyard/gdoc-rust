@@ -7,4 +7,6 @@ pub trait AdjacentNodes {
 #[cfg(test)]
 mod test {
     use super::*;
+
+    struct AdjVec(Vec<Vec<usize>>);
 }
