@@ -10,6 +10,6 @@ mod test {
 
     struct AdjVec(Vec<Vec<usize>>);
     impl AdjacentNodes for AdjVec {
-        
+        type Node = usize;
     }
 }
