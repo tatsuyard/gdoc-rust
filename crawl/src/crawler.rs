@@ -11,5 +11,9 @@ mod test {
     struct AdjVec(Vec<Vec<usize>>);
     impl AdjacentNodes for AdjVec {
         type Node = usize;
+
+        fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node> {
+            
+        }
     }
 }
