@@ -19,3 +19,7 @@ mod test {
         }
     }
 }
+
+pub struct Crawler<'a, G: AdjacentNodes> {
+    
+}
