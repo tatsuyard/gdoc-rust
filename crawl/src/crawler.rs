@@ -23,4 +23,5 @@ mod test {
 pub struct Crawler<'a, G: AdjacentNodes> {
     graph: &'a G,
     visit: VecDeque<<G as AdjacentNodes>::Node>,
+    visited: HashSet<<G AdjacentNodes>::Node>,
 }
