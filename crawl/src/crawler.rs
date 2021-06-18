@@ -25,3 +25,5 @@ pub struct Crawler<'a, G: AdjacentNodes> {
     visit: VecDeque<<G as AdjacentNodes>::Node>,
     visited: HashSet<<G AdjacentNodes>::Node>,
 }
+
+impl<'a, G> Crawler<'a, G>
