@@ -27,3 +27,9 @@ pub struct Crawler<'a, G: AdjacentNodes> {
 }
 
 impl<'a, G> Crawler<'a, G>
+where 
+G: AdjacentNodes,
+<G as AdjacentNodes>::Node: Clone + Hash + Eq + Borrow<<G as AdjacentNodes>::Node>,
+{
+    
+}
