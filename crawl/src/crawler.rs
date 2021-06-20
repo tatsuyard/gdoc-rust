@@ -31,5 +31,7 @@ where
 G: AdjacentNodes,
 <G as AdjacentNodes>::Node: Clone + Hash + Eq + Borrow<<G as AdjacentNodes>::Node>,
 {
-    
+    pub fn new(graph: &'a G, start: <G as AdjacentNodes>::Node) -> Self {
+        
+    }
 }
