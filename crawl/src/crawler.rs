@@ -33,5 +33,7 @@ G: AdjacentNodes,
 {
     pub fn new(graph: &'a G, start: <G as AdjacentNodes>::Node) -> Self {
         let mut visit = VecDeque::new();
+        let visited = HashSet::new();
+        visit.push_back(start);
     }
 }
