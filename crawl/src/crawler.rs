@@ -39,6 +39,7 @@ G: AdjacentNodes,
         Self {
             graph: graph,
             visit: visit,
+            visited: visited, 
         }
     }
 }
