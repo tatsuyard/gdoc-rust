@@ -23,7 +23,7 @@ mod test {
 pub struct Crawler<'a, G: AdjacentNodes> {
     graph: &'a G,
     visit: VecDeque<<G as AdjacentNodes>::Node>,
-    visited: HashSet<<G AdjacentNodes>::Node>,
+    visited: HashSet<<G as AdjacentNodes>::Node>,
 }
 
 impl<'a, G> Crawler<'a, G>
@@ -43,3 +43,11 @@ G: AdjacentNodes,
         }
     }
 }
+
+impl<'a, G> Iterator for Crawler<'a, G>
+where
+    G: AdjacentNodes,
+    <G as AdjacentNodes>::Node: Clone + Hash + Eq + Borrow<<G as AdjacentNodes>::Node>,
+    {
+        type Item = <G as AdjacentNodes>::Node;
+    }
