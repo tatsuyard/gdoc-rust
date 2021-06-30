@@ -50,4 +50,8 @@ where
     <G as AdjacentNodes>::Node: Clone + Hash + Eq + Borrow<<G as AdjacentNodes>::Node>,
     {
         type Item = <G as AdjacentNodes>::Node;
+
+        fn next(&mut self) -> Option<Self::Item> {
+            
+        }
     }
