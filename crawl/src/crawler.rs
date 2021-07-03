@@ -53,6 +53,9 @@ where
 
         fn next(&mut self) -> Option<Self::Item> {
             while let Some(v) = self.visit.pop_front() {
+                if self.visited.contains(&v) {
+                    continue;
+                }
 
             }
             None
