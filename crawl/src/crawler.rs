@@ -56,6 +56,7 @@ where
                 if self.visited.contains(&v) {
                     continue;
                 }
+                let adj = self.graph.adjacent_nodes(&v);
 
             }
             None
