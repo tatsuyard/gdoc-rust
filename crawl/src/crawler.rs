@@ -57,6 +57,9 @@ where
                     continue;
                 }
                 let adj = self.graph.adjacent_nodes(&v);
+                for u in adj.into_iter() {
+                    
+                }
 
             }
             None
