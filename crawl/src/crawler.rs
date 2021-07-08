@@ -62,6 +62,7 @@ where
                         self.visit.push_back(u);
                     }
                 }
+                self.visited.insert(v.clone());
 
             }
             None
