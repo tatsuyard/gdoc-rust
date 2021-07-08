@@ -59,7 +59,7 @@ where
                 let adj = self.graph.adjacent_nodes(&v);
                 for u in adj.into_iter() {
                     if !self.visited.contains(&u) {
-                        
+                        self.visit.push_back(u);
                     }
                 }
 
