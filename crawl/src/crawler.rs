@@ -63,6 +63,7 @@ where
                     }
                 }
                 self.visited.insert(v.clone());
+                return Some(v);
 
             }
             None
