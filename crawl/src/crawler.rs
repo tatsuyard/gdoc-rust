@@ -20,6 +20,11 @@ mod test {
     }
 }
 
+#[test]
+fn bfs() {
+
+}
+
 pub struct Crawler<'a, G: AdjacentNodes> {
     graph: &'a G,
     visit: VecDeque<<G as AdjacentNodes>::Node>,
