@@ -22,7 +22,9 @@ mod test {
 
 #[test]
 fn bfs() {
-    let graph = AdjVec(vec![]);
+    let graph = AdjVec(vec![
+        vec![1, 2],
+    ]);
 
 }
 
