@@ -25,6 +25,8 @@ fn bfs() {
     let graph = AdjVec(vec![
         vec![1, 2],
         vec![0, 3],
+        vec![3],
+        vec![2, 0],
     ]);
 
 }
