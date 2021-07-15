@@ -29,6 +29,8 @@ fn bfs() {
         vec![2, 0],
     ]);
 
+    let bfs = Crawler::new(&graph, 0);
+
 }
 
 pub struct Crawler<'a, G: AdjacentNodes> {
