@@ -30,6 +30,7 @@ fn bfs() {
     ]);
 
     let bfs = Crawler::new(&graph, 0);
+    let nodes: Vec<usize> = bfs.iter().collect();
 
 }
 
