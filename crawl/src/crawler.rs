@@ -1,3 +1,6 @@
+use std::collections::HashSet;
+use std::borrow::Borrow;
+
 pub trait AdjacentNodes {
     type Node;
 
