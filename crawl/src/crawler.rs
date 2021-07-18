@@ -31,6 +31,7 @@ fn bfs() {
 
     let bfs = Crawler::new(&graph, 0);
     let nodes: Vec<usize> = bfs.iter().collect();
+    assert_eq!(nodes, vec![0, 1, 2, 3]);
 
 }
 
