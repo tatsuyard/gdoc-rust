@@ -1,6 +1,7 @@
 use std::borrow::Borrow;
 use std::collections::HashSet;
 use std::collections::VecDeque;
+use std::hash::Hash;
 
 pub trait AdjacentNodes {
     type Node;
