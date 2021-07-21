@@ -27,8 +27,8 @@ mod test {
 fn bfs() {
     let graph = AdjVec(vec![vec![1, 2], vec![0, 3], vec![3], vec![2, 0]]);
 
-    let bfs = Crawler::new(&graph, 0);
-    let nodes: Vec<usize> = bfs.iter().collect();
+    let crawler = Crawler::new(&graph, 0);
+    let nodes: Vec<usize> = crawler.collect();
     assert_eq!(nodes, vec![0, 1, 2, 3]);
 }
 
