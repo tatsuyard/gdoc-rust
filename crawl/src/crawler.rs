@@ -1,6 +1,5 @@
 use std::borrow::Borrow;
-use std::collections::HashSet;
-use std::collections::VecDeque;
+use std::collections::{HashSet, VecDeque};
 use std::hash::Hash;
 
 pub struct Crawler<'a, G: AdjacentNodes> {
