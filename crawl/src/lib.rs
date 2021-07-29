@@ -61,6 +61,10 @@ impl LinkExtractor {
         }
         Ok(links)
     }
+    impl crawler::AdjacentNodes for LinkExtractor {
+    
+    }    
 }
+
 
 pub mod crawler;
