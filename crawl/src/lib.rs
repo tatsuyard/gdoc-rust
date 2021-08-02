@@ -65,6 +65,7 @@ impl LinkExtractor {
         type Node = Url;
         fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node> {
             self.get_links(v.clone())
+                .unwrap()
         }
     }    
 }
