@@ -16,8 +16,8 @@ fn main() -> eyre::Result<()> {
     let wait = Duration::from_mills(100);
 
     let links = extractor.get_links(url)?;
-    for link in links.iter() {
-        println!("{}", link);
+    for url in crawler.take(10) {
+        println!("{}", url);
     }
 
     Ok(())
