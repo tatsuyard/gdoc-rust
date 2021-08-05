@@ -18,6 +18,7 @@ fn main() -> eyre::Result<()> {
     let links = extractor.get_links(url)?;
     for url in crawler.take(10) {
         println!("{}", url);
+        std::thread::sleep(wait.clone());
     }
 
     Ok(())
