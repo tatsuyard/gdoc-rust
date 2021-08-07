@@ -1,5 +1,6 @@
 use crawl::LinkExtractor;
 use reqwest::blocking::ClientBuilder;
+use structopt::StructOpt;
 use url::Url;
 
 fn main() -> eyre::Result<()> {
