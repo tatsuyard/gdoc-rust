@@ -3,6 +3,8 @@ use reqwest::blocking::ClientBuilder;
 use structopt::StructOpt;
 use url::Url;
 
+#[derive(StructOpt)]
+struct Opt {}
 fn main() -> eyre::Result<()> {
     env_logger::init();
 
