@@ -4,7 +4,9 @@ use structopt::StructOpt;
 use url::Url;
 
 #[derive(StructOpt)]
-struct Opt {}
+struct Opt {
+    maximum_pages: usize,
+}
 fn main() -> eyre::Result<()> {
     env_logger::init();
 
