@@ -5,6 +5,7 @@ use url::Url;
 
 #[derive(StructOpt)]
 struct Opt {
+    #[structopt(short = "n")]
     maximum_pages: usize,
     start_page: Url,
 }
