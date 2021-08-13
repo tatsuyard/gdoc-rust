@@ -12,6 +12,7 @@ struct Opt {
 fn main() -> eyre::Result<()> {
     env_logger::init();
 
+    let opt = Opt::from_args();
     let url = std::env::args()
         .nth(1)
         .unwrap_or("https://www.rust-lang.org".to_owned());
