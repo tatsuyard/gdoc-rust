@@ -18,8 +18,7 @@ fn main() -> eyre::Result<()> {
 
     let wait = Duration::from_mills(100);
 
-    let links = extractor.get_links(url)?;
-    for url in crawler.take(10) {
+    for url in crawler.take(opt.maximum_pages) {
         println!("{}", url);
         std::thread::sleep(wait.clone());
     }
