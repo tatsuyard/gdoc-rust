@@ -9,6 +9,7 @@ struct Opt {
     maximum_pages: usize,
     start_page: Url,
 }
+
 fn main() -> eyre::Result<()> {
     env_logger::init();
 
