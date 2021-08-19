@@ -6,6 +6,7 @@ use url::Url;
 #[derive(StructOpt)]
 struct Opt {
     #[structopt(short = "n")]
+    /// Maximum number of pages to be crawled
     maximum_pages: usize,
     start_page: Url,
 }
