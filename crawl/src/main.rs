@@ -8,6 +8,7 @@ struct Opt {
     #[structopt(short = "n")]
     /// Maximum number of pages to be crawled
     maximum_pages: usize,
+    /// URL where this program starts crawling
     start_page: Url,
 }
 
