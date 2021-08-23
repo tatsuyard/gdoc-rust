@@ -32,7 +32,6 @@ where
     <G as AdjacentNodes>::Node: Clone + Hash + Eq + Borrow<<G as AdjacentNodes>::Node>,
 {
     type Item = <G as AdjacentNodes>::Node;
-
     fn next(&mut self) -> Option<Self::Item> {
         while let Some(v) = self.visit.pop_front() {
             if self.visited.contains(&v) {
