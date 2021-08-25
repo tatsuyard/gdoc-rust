@@ -1,6 +1,9 @@
+pub mod crawler;
+
 use reqwest::blocking::Client;
 use select::document::Document;
 use url::Url;
+use url::ParseError as UrlParseError;
 use log;
 use thiserror::Error;
 
@@ -72,4 +75,3 @@ impl LinkExtractor {
 }
 
 
-pub mod crawler;
