@@ -69,6 +69,9 @@ impl LinkExtractor {
         fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node> {
             match self.get_links(v.clone()) {
                 OK(links) => links,
+                Err(e) => {
+                    
+                }
             }
         }
     }    
