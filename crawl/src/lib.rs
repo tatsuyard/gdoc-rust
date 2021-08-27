@@ -70,7 +70,7 @@ impl LinkExtractor {
             match self.get_links(v.clone()) {
                 OK(links) => links,
                 Err(e) => {
-                    
+                    use std::error::Error;
                 }
             }
         }
