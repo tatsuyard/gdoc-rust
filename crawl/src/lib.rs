@@ -72,6 +72,8 @@ impl LinkExtractor {
                 Err(e) => {
                     use std::error::Error;
                     log::warn!("Error source: {}", err);
+
+                    let mut e = e.source();
                 }
             }
         }
