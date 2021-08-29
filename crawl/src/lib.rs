@@ -71,6 +71,7 @@ impl LinkExtractor {
                 OK(links) => links,
                 Err(e) => {
                     use std::error::Error;
+                    log::warn!("Error source: {}", err);
                 }
             }
         }
