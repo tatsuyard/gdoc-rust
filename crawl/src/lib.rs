@@ -74,6 +74,9 @@ impl LinkExtractor {
                     log::warn!("Error source: {}", err);
 
                     let mut e = e.source();
+                    loop {
+                        
+                    }
                 }
             }
         }
