@@ -75,7 +75,11 @@ impl LinkExtractor {
 
                     let mut e = e.source();
                     loop {
-                        
+                        if let Some(err) = e {
+
+                        } else {
+                            
+                        }
                     }
                 }
             }
