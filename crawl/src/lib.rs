@@ -82,7 +82,8 @@ impl LinkExtractor {
                             break;
                         }
                     }
-                }
+                    vec![]
+                },
             }
         }
     }    
