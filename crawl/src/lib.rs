@@ -2,6 +2,7 @@ pub mod crawler;
 
 use reqwest::blocking::Client;
 use select::document::Document;
+use select::predicate::Name;
 use url::Url;
 use url::ParseError as UrlParseError;
 use log;
