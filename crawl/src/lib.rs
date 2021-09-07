@@ -1,14 +1,14 @@
 pub mod crawler;
 
+use log;
 use reqwest::blocking::Client;
 use select::document::Document;
 use select::predicate::Name;
-use url::Url;
-use url::ParseError as UrlParseError;
-use log;
 use thiserror::Error;
+use url::ParseError as UrlParseError;
+use url::Url;
 
-#[derive(Error,Debug)]
+#[derive(Error, Debug)]
 pub enum GetLinksError {
     #[error("Failed to send a request")]
     SendRequest(#[source] reqwest::Error),
@@ -26,17 +26,19 @@ pub struct LinkExtractor {
 
 impl LinkExtractor {
     pub fn from_client(client: Client) -> Self {
-        Self {
-            client: client,
-        }
+        Self { client: client }
     }
 
     pub fn get_links(&self, url: Url) -> Result<Vec<Url>, eyre::Report> {
         log::info!("GET \"{}\"", url);
-        let response = self.client.get(url).send()
-        .map_err(|e| GetLinksError::SendRequest(e))?;
-        let response = response.error_for_status()
-        .map_err(|e| GetLinksError::ServerError(e))?;
+        let response = self
+            .client
+            .get(url)
+            .send()
+            .map_err(|e| GetLinksError::SendRequest(e))?;
+        let response = response
+            .error_for_status()
+            .map_err(|e| GetLinksError::ServerError(e))?;
 
         let base_url = response.url().clone();
         let status = response.status();
@@ -50,43 +52,44 @@ impl LinkExtractor {
             use url::ParseError as UrlParseError;
             // println!("{:?}", Url::parse(href));
             match Url::parse(href) {
-                Ok(mut url) => { 
+                Ok(mut url) => {
                     url.set_fragment(None);
                     links.push(url);
-                },
+                }
                 Err(UrlParseError::RelativeUrlWithoutBase) => {
                     let url = base_url.join(href)?;
                     println!("{}", url);
-                },
+                }
                 Err(e) => {
                     log::warn!("URL parse error: {}", e);
-                },
+                }
             }
         }
         Ok(links)
     }
-    impl crawler::AdjacentNodes for LinkExtractor {
-        type Node = Url;
-        fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node> {
-            match self.get_links(v.clone()) {
-                OK(links) => links,
-                Err(e) => {
-                    use std::error::Error;
-                    log::warn!("Error source: {}", err);
-
-                    let mut e = e.source();
-                    loop {
-                        if let Some(err) = e {
-                            log::warn!("Error source: {}", err);
-                            e = err.source();
-                        } else {
-                            break;
-                        }
-                    }
-                    vec![]
-                },
-            }
-        }
-    }    
 }
 
+impl crawler::AdjacentNodes for LinkExtractor {
+    type Node = Url;
+
+    fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node> {
+        match self.get_links(v.clone()) {
+            OK(links) => links,
+            Err(e) => {
+                use std::error::Error;
+                log::warn!("Error source: {}", err);
+
+                let mut e = e.source();
+                loop {
+                    if let Some(err) = e {
+                        log::warn!("Error source: {}", err);
+                        e = err.source();
+                    } else {
+                        break;
+                    }
+                }
+                vec![]
+            }
+        }
+    }
+}
