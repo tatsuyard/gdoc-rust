@@ -1,5 +1,6 @@
 use crawl::LinkExtractor;
 use reqwest::blocking::ClientBuilder;
+use std::time::Duration;
 use structopt::StructOpt;
 use url::Url;
 
