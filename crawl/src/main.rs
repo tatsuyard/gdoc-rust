@@ -25,5 +25,6 @@ fn main() -> eyre::Result<()> {
         println!("{}", url);
         std::thread::sleep(wait.clone());
     }
+
     Ok(())
 }
