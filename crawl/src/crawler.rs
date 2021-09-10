@@ -66,6 +66,8 @@ mod test {
             self.0.get(*v).cloned().unwrap_or(Vec::new())
         }
     }
+
+    use std::rc::Rc;
 }
 
 #[test]
