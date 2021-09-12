@@ -69,6 +69,8 @@ mod test {
 
     use std::rc::Rc;
     struct RcAdjVec(Vec<Vec<Rc<usize>>>);
+
+    fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Nodde> {}
 }
 
 #[test]
