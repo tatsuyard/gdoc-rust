@@ -70,7 +70,9 @@ mod test {
     use std::rc::Rc;
     struct RcAdjVec(Vec<Vec<Rc<usize>>>);
 
-    fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Nodde> {}
+    fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Nodde> {
+        let v: usize = *v.borrow();
+    }
 }
 
 #[test]
