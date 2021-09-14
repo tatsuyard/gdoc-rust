@@ -72,6 +72,7 @@ mod test {
 
     fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Nodde> {
         let v: usize = *v.borrow();
+        self.0.get(v).cloned().unwrap_or(Vec::new())
     }
 }
 
