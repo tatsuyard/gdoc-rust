@@ -24,6 +24,11 @@ where
             visited: visited,
         }
     }
+
+    #[test]
+    fn adjvec() {
+        let graph = AdjVec(vec![vec![1, 2]]);
+    }
 }
 
 impl<'a, G> Iterator for Crawler<'a, G>
