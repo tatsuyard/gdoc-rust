@@ -27,7 +27,7 @@ where
 
     #[test]
     fn adjvec() {
-        let graph = AdjVec(vec![vec![1, 2]]);
+        let graph = AdjVec(vec![vec![1, 2], vec![0, 3]]);
     }
 }
 
