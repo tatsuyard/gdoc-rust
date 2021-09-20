@@ -30,6 +30,7 @@ where
         let graph = AdjVec(vec![vec![1, 2], vec![0, 3], vec![3], vec![2, 0]]);
 
         assert_eq!(graph.adjacent_nodes(&3), vec![2, 0]);
+        assert_eq!(graph.adjacent_nodes(&10), vec![]);
     }
 }
 
