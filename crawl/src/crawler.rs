@@ -32,6 +32,9 @@ where
         assert_eq!(graph.adjacent_nodes(&3), vec![2, 0]);
         assert_eq!(graph.adjacent_nodes(&10), vec![]);
     }
+
+    #[test]
+    fn bfs0() {}
 }
 
 impl<'a, G> Iterator for Crawler<'a, G>
