@@ -35,7 +35,7 @@ where
 
     #[test]
     fn bfs0() {
-        let graph = AdjVec(vec![]);
+        let graph = AdjVec(vec![vec![1, 2]]);
     }
 }
 
