@@ -38,6 +38,7 @@ where
         let graph = AdjVec(vec![vec![1, 2], vec![0, 3], vec![3], vec![2, 0]]);
         let crawler = Crawler::new(&graph, 0);
         let nodes: Vec<usize> = crawler.collect();
+        assert_eq!(nodes, vec![0, 1, 2, 3]);
     }
 }
 
