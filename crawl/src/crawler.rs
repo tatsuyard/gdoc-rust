@@ -40,6 +40,9 @@ where
         let nodes: Vec<usize> = crawler.collect();
         assert_eq!(nodes, vec![0, 1, 2, 3]);
     }
+
+    #[test]
+    fn bfs1() {}
 }
 
 impl<'a, G> Iterator for Crawler<'a, G>
