@@ -51,7 +51,9 @@ where
     }
 
     #[test]
-    fn bfs3() {}
+    fn bfs3() {
+        let graph = AdjVec(vec![vec![1, 1, 2]]);
+    }
 }
 
 impl<'a, G> Iterator for Crawler<'a, G>
