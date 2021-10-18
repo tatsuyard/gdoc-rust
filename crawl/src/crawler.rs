@@ -52,7 +52,7 @@ where
 
     #[test]
     fn bfs3() {
-        let graph = AdjVec(vec![vec![1, 1, 2], vec![2, 3], vec![]]);
+        let graph = AdjVec(vec![vec![1, 1, 2], vec![2, 3], vec![], vec![]]);
     }
 }
 
