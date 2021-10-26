@@ -62,6 +62,7 @@ where
     fn rc_bfs() {
         let v0 = Rc::new(0);
         let v1 = Rc::new(1);
+        let v2 = Rc::new(2);
     }
 }
 
