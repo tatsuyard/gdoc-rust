@@ -64,6 +64,7 @@ where
         let v1 = Rc::new(1);
         let v2 = Rc::new(2);
         let v3 = Rc::new(3);
+        let graph = RcAdjVec(vec![]);
     }
 }
 
