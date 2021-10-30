@@ -66,6 +66,7 @@ where
         let v3 = Rc::new(3);
         let graph = RcAdjVec(vec![
             vec![v1.clone(), v2.clone()],
+            vec![v0.clone(), v3.clone()],
         ]);
     }
 }
