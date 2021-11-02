@@ -70,6 +70,7 @@ where
             vec![v3.clone()],
             vec![v2.clone(), v0.clone()],
         ]);
+        let crawler = Crawler::new(&graph, v0.clone());
     }
 }
 
