@@ -71,6 +71,7 @@ where
             vec![v2.clone(), v0.clone()],
         ]);
         let crawler = Crawler::new(&graph, v0.clone());
+        let nodes: Vec<Rc<usize>> = crawler.collect();
     }
 }
 
