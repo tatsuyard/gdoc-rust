@@ -24,6 +24,66 @@ where
             visited: visited,
         }
     }
+}
+
+impl<'a, G> Iterator for Crawler<'a, G>
+where
+    G: AdjacentNodes,
+    <G as AdjacentNodes>::Node: Clone + Hash + Eq + Borrow<<G as AdjacentNodes>::Node>,
+{
+    type Item = <G as AdjacentNodes>::Node;
+    fn next(&mut self) -> Option<Self::Item> {
+        while let Some(v) = self.visit.pop_front() {
+            if self.visited.contains(&v) {
+                continue;
+            }
+            let adj = self.graph.adjacent_nodes(&v);
+            for u in adj.into_iter() {
+                if !self.visited.contains(&u) {
+                    self.visit.push_back(u);
+                }
+            }
+            self.visited.insert(v.clone());
+            return Some(v);
+        }
+        None
+    }
+}
+
+pub trait AdjacentNodes {
+    type Node;
+    fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node>;
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+    struct AdjVec(Vec<Vec<usize>>);
+
+    impl AdjacentNodes for AdjVec {
+        type Node = usize;
+        fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node> {
+            self.0.get(*v).cloned().unwrap_or(Vec::new())
+        }
+    }
+
+    use std::rc::Rc;
+    struct RcAdjVec(Vec<Vec<Rc<usize>>>);
+    impl AdjacentNodes for RcAdjVec {}
+
+    fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Nodde> {
+        let v: usize = *v.borrow();
+        self.0.get(v).cloned().unwrap_or(Vec::new())
+    }
+}
+
+#[test]
+fn bfs() {
+    let graph = AdjVec(vec![vec![1, 2], vec![0, 3], vec![3], vec![2, 0]]);
+    let crawler = Crawler::new(&graph, 0);
+    let nodes: Vec<usize> = crawler.collect();
+    assert_eq!(nodes, vec![0, 1, 2, 3]);
+}
 
     #[test]
     fn adjvec() {
@@ -75,62 +135,4 @@ where
 
         assert_eq!(nodes, vec![v0, v1, v2, v3]);
     }
-}
-
-impl<'a, G> Iterator for Crawler<'a, G>
-where
-    G: AdjacentNodes,
-    <G as AdjacentNodes>::Node: Clone + Hash + Eq + Borrow<<G as AdjacentNodes>::Node>,
-{
-    type Item = <G as AdjacentNodes>::Node;
-    fn next(&mut self) -> Option<Self::Item> {
-        while let Some(v) = self.visit.pop_front() {
-            if self.visited.contains(&v) {
-                continue;
-            }
-            let adj = self.graph.adjacent_nodes(&v);
-            for u in adj.into_iter() {
-                if !self.visited.contains(&u) {
-                    self.visit.push_back(u);
-                }
-            }
-            self.visited.insert(v.clone());
-            return Some(v);
-        }
-        None
-    }
-}
-
-pub trait AdjacentNodes {
-    type Node;
-    fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node>;
-}
-
-#[cfg(test)]
-mod test {
-    use super::*;
-    struct AdjVec(Vec<Vec<usize>>);
-
-    impl AdjacentNodes for AdjVec {
-        type Node = usize;
-        fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node> {
-            self.0.get(*v).cloned().unwrap_or(Vec::new())
-        }
-    }
-
-    use std::rc::Rc;
-    struct RcAdjVec(Vec<Vec<Rc<usize>>>);
-
-    fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Nodde> {
-        let v: usize = *v.borrow();
-        self.0.get(v).cloned().unwrap_or(Vec::new())
-    }
-}
-
-#[test]
-fn bfs() {
-    let graph = AdjVec(vec![vec![1, 2], vec![0, 3], vec![3], vec![2, 0]]);
-    let crawler = Crawler::new(&graph, 0);
-    let nodes: Vec<usize> = crawler.collect();
-    assert_eq!(nodes, vec![0, 1, 2, 3]);
 }
