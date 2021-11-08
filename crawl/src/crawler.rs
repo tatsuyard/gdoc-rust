@@ -69,12 +69,14 @@ mod test {
 
     use std::rc::Rc;
     struct RcAdjVec(Vec<Vec<Rc<usize>>>);
-    impl AdjacentNodes for RcAdjVec {}
-
-    fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Nodde> {
-        let v: usize = *v.borrow();
-        self.0.get(v).cloned().unwrap_or(Vec::new())
+    impl AdjacentNodes for RcAdjVec {
+        fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Nodde> {
+            let v: usize = *v.borrow();
+            self.0.get(v).cloned().unwrap_or(Vec::new())
+        }
+    
     }
+
 }
 
 #[test]
