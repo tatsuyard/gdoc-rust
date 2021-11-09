@@ -61,6 +61,7 @@ mod test {
     struct AdjVec(Vec<Vec<usize>>);
 
     impl AdjacentNodes for AdjVec {
+        type Node = Rc<usize>;
         type Node = usize;
         fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node> {
             self.0.get(*v).cloned().unwrap_or(Vec::new())
