@@ -75,9 +75,7 @@ mod test {
             let v: usize = *v.borrow();
             self.0.get(v).cloned().unwrap_or(Vec::new())
         }
-    
     }
-
 }
 
 #[test]
