@@ -67,7 +67,6 @@ mod test {
             self.0.get(*v).cloned().unwrap_or(Vec::new())
         }
     }
-
     use std::rc::Rc;
     struct RcAdjVec(Vec<Vec<Rc<usize>>>);
     impl AdjacentNodes for RcAdjVec {
