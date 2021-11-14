@@ -115,7 +115,6 @@ fn bfs() {
         let graph = AdjVec(vec![vec![1, 1, 2], vec![2, 3], vec![], vec![]]);
         let crawler = Crawler::new(&graph, 0);
         let nodes: Vec<usize> = crawler.collect();
-
         assert_eq!(nodes, vec![0, 1, 2, 3]);
     }
     #[test]
