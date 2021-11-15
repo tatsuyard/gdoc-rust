@@ -117,6 +117,7 @@ fn bfs() {
         let nodes: Vec<usize> = crawler.collect();
         assert_eq!(nodes, vec![0, 1, 2, 3]);
     }
+    
     #[test]
     fn rc_bfs() {
         let v0 = Rc::new(0);
