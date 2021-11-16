@@ -70,6 +70,8 @@ mod test {
     use std::rc::Rc;
     struct RcAdjVec(Vec<Vec<Rc<usize>>>);
     impl AdjacentNodes for RcAdjVec {
+        type Node = Rc<usize>;
+        
         fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Nodde> {
             let v: usize = *v.borrow();
             self.0.get(v).cloned().unwrap_or(Vec::new())
@@ -117,7 +119,7 @@ fn bfs() {
         let nodes: Vec<usize> = crawler.collect();
         assert_eq!(nodes, vec![0, 1, 2, 3]);
     }
-    
+
     #[test]
     fn rc_bfs() {
         let v0 = Rc::new(0);
