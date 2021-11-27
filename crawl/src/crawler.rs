@@ -163,4 +163,4 @@ fn bfs() {
         let nodes: Vec<Rc<usize>> = crawler.collect();
         assert_eq!(nodes, vec![v0, v1, v2, v3]);
     }
-}
+
