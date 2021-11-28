@@ -26,7 +26,9 @@ pub struct LinkExtractor {
 
 impl LinkExtractor {
     pub fn from_client(client: Client) -> Self {
-        Self { client: client }
+        Self { 
+            client: client
+        }
     }
 
     pub fn get_links(&self, url: Url) -> Result<Vec<Url>, eyre::Report> {
