@@ -75,6 +75,9 @@ impl crawler::AdjacentNodes for LinkExtractor {
     type Node = Url;
 
     fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node> {
+        let links = {
+            
+        }
         match self.get_links(v.clone()) {
             OK(links) => links,
             Err(e) => {
