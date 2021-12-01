@@ -77,6 +77,7 @@ impl crawler::AdjacentNodes for LinkExtractor {
     fn adjacent_nodes(&self, v: &Self::Node) -> Vec<Self::Node> {
         let links = {
             let t0 = std::time::Instant::now();
+            let links = self.get_links(v.clone());
         }
         match self.get_links(v.clone()) {
             OK(links) => links,
