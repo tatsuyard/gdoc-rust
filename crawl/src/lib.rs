@@ -79,6 +79,7 @@ impl crawler::AdjacentNodes for LinkExtractor {
             let t0 = std::time::Instant::now();
             let links = self.get_links(v.clone());
             let elp = t0.elapsed();
+            log::info!("GetLinks: {} ms", elp.as_millis());
         }
         match self.get_links(v.clone()) {
             OK(links) => links,
