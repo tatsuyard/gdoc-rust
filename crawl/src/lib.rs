@@ -81,7 +81,8 @@ impl crawler::AdjacentNodes for LinkExtractor {
             let elp = t0.elapsed();
             log::info!("GetLinks: {} ms", elp.as_millis());
             links
-        }
+        };
+        match links {}
         match self.get_links(v.clone()) {
             OK(links) => links,
             Err(e) => {
