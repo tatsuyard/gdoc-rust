@@ -85,7 +85,8 @@ impl crawler::AdjacentNodes for LinkExtractor {
         match links {
             Ok(links) => {
                 log::info!("{} links found", links.len());
-            }
+                links
+            },
         }
         match self.get_links(v.clone()) {
             OK(links) => links,
