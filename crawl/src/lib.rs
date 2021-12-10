@@ -89,6 +89,7 @@ impl crawler::AdjacentNodes for LinkExtractor {
             },
             Err(e) => {
                 use std::error::Error;
+                log::warn!("Error occurred: {}", e);
             }
         }
         match self.get_links(v.clone()) {
