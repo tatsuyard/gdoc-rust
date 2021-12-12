@@ -92,23 +92,5 @@ impl crawler::AdjacentNodes for LinkExtractor {
                 log::warn!("Error occurred: {}", e);
             }
         }
-        match self.get_links(v.clone()) {
-            OK(links) => links,
-            Err(e) => {
-                use std::error::Error;
-                log::warn!("Error source: {}", err);
-
-                let mut e = e.source();
-                loop {
-                    if let Some(err) = e {
-                        log::warn!("Error source: {}", err);
-                        e = err.source();
-                    } else {
-                        break;
-                    }
-                }
-                vec![]
-            }
-        }
     }
 }
