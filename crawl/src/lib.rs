@@ -91,7 +91,6 @@ impl crawler::AdjacentNodes for LinkExtractor {
                 use std::error::Error;
                 log::warn!("Error occurred: {}", e);
                 let mut e = e.source();
-                
             }
         }
     }
