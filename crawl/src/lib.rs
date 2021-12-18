@@ -93,7 +93,7 @@ impl crawler::AdjacentNodes for LinkExtractor {
                 let mut e = e.source();
                 loop {
                     if let Some(err) = e {
-                        
+                        log::warn!("Error source: {}", err);
                     }
                 }
             }
