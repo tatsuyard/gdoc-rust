@@ -95,6 +95,9 @@ impl crawler::AdjacentNodes for LinkExtractor {
                     if let Some(err) = e {
                         log::warn!("Error source: {}", err);
                         e = err.source();
+                    } else {
+                        
+                    }
                     }
                 }
             }
