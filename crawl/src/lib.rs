@@ -96,7 +96,7 @@ impl crawler::AdjacentNodes for LinkExtractor {
                         log::warn!("Error source: {}", err);
                         e = err.source();
                     } else {
-                        
+                        break;
                     }
                     }
                 }
