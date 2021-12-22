@@ -99,6 +99,7 @@ impl crawler::AdjacentNodes for LinkExtractor {
                         break;
                     }
                     }
+                    vec![]
                 }
             }
         }
