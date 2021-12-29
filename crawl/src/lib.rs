@@ -103,7 +103,6 @@ impl crawler::AdjacentNodes for LinkExtractor {
             }
             
         }
-        
     }
     
 }
