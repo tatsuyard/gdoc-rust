@@ -70,7 +70,6 @@ impl LinkExtractor {
         Ok(links)
     }
 }
-
 impl crawler::AdjacentNodes for LinkExtractor {
     type Node = Url;
 
