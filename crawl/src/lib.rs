@@ -19,7 +19,6 @@ pub enum GetLinksError {
     #[error("Server returned an error")]
     ServerError(#[source] reqwest::Error),
 }
-
 pub struct LinkExtractor {
     client: Client,
 }
