@@ -1,5 +1,4 @@
 pub mod crawler;
-
 use log;
 use reqwest::blocking::Client;
 use select::document::Document;
