@@ -10,3 +10,4 @@ google-drive = "0.1.12"
 yup-oauth2 = "4.1.4"
 dotenv = "0.15.0"
 tokio = { version = "0.2", features = ["full"] }
+structopt = "0.3.26"
