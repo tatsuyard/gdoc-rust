@@ -7,7 +7,7 @@ pub enum Action {
     Done { position: usize },
     List,
 }
-
+#[derive(Debug, StructOpt)]
 pub struct CommandLineArgs {
     pub action: Action,
     pub journal_file: Option<PathBuf>,
