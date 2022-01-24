@@ -1,5 +1,7 @@
 use std::path::PathBuf;
+use structopt::StructOpt;
 
+#[derive(Debug, StructOpt)]
 pub enum Action {
     Add { task: String },
     Done { position: usize },
