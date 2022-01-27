@@ -13,6 +13,7 @@ pub enum Action {
     about = "A command line to-do app written in Rust"
 )]
 pub struct CommandLineArgs {
+    #[structopt(subcommand)]
     pub action: Action,
     pub journal_file: Option<PathBuf>,
 }
