@@ -15,5 +15,7 @@ pub enum Action {
 pub struct CommandLineArgs {
     #[structopt(subcommand)]
     pub action: Action,
+
+    #[structopt(parse(from_os_str), short, long)]
     pub journal_file: Option<PathBuf>,
 }
