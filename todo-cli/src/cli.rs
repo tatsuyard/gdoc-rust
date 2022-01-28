@@ -5,7 +5,7 @@ use structopt::StructOpt;
 pub enum Action {
     Add { task: String },
     Done { position: usize },
-    List,
+    List
 }
 #[derive(Debug, StructOpt)]
 #[structopt(
