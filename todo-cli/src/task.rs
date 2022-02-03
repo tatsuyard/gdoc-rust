@@ -5,3 +5,5 @@ pub struct Task {
     pub text: String,
     pub created_at: DateTime<Utc>,
 }
+
+impl Task {}
