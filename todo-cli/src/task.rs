@@ -6,4 +6,6 @@ pub struct Task {
     pub created_at: DateTime<Utc>,
 }
 
-impl Task {}
+impl Task {
+    pub fn new(text: String) -> Task {}
+}
