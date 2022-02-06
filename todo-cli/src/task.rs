@@ -7,5 +7,7 @@ pub struct Task {
 }
 
 impl Task {
-    pub fn new(text: String) -> Task {}
+    pub fn new(text: String) -> Task {
+        let created_at: DateTime<Utc> = Utc::now();
+    }
 }
