@@ -2,7 +2,7 @@ use chrono::{serde::ts_seconds, DateTime, Utc};
 use serde::Deserialize;
 use serde::Serialize;
 
-#[derive(Debug)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Task {
     pub text: String,
     pub created_at: DateTime<Utc>,
