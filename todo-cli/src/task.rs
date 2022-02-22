@@ -20,3 +20,6 @@ impl Task {
 }
 
 pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {}
+
+pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> { ... }
+
