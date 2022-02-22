@@ -18,3 +18,5 @@ impl Task {
         Task { text, created_at }
     }
 }
+
+pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {}
