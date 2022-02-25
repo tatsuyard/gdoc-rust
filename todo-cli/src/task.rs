@@ -4,6 +4,7 @@ use serde::Serialize;
 use std::io::Result;
 use std::path::PathBuf;
 use std::fs::{File, OpenOptions};
+use std::io::{Result, Seek, SeekFrom};
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Task {
