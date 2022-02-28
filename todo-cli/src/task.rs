@@ -1,10 +1,10 @@
 use chrono::{serde::ts_seconds, DateTime, Utc};
 use serde::Deserialize;
 use serde::Serialize;
-use std::io::Result;
-use std::path::PathBuf;
 use std::fs::{File, OpenOptions};
+use std::io::Result;
 use std::io::{Result, Seek, SeekFrom};
+use std::path::PathBuf;
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Task {
@@ -22,9 +22,13 @@ impl Task {
 }
 
 pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
-    let mut file = OpenOptions::new().read(true).write(true).create(true);
+    let mut file = OpenOptions::new()
+        .read(true)
+        .write(true)
+        .create(true)
+        .open(journal_path)?;
 }
 
-pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> { ... }
+pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> {}
 
-pub fn list_tasks(journal_path: PathBuf) -> Result<()> { ... }
+pub fn list_tasks(journal_path: PathBuf) -> Result<()> {}
