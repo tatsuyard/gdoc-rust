@@ -27,6 +27,8 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
         .write(true)
         .create(true)
         .open(journal_path)?;
+
+        let mut tasks: Vec<Task>
 }
 
 pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> {}
