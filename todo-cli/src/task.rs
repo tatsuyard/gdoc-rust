@@ -28,7 +28,9 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
         .create(true)
         .open(journal_path)?;
 
-    let mut tasks: Vec<Task> = match serde_json::from_reader(&file) {};
+    let mut tasks: Vec<Task> = match serde_json::from_reader(&file) {
+        Ok(tasks) => tasks,
+    };
 }
 
 pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> {}
