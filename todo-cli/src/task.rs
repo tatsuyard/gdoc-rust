@@ -30,6 +30,7 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
 
     let mut tasks: Vec<Task> = match serde_json::from_reader(&file) {
         Ok(tasks) => tasks,
+        Err(e) if e.is_eof() => Vec::new(),
     };
 }
 
