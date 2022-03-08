@@ -35,6 +35,8 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
     };
 
     file.seek(SeekForm::Start(0))?;
+
+    tasks.push(task);
 }
 
 pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> {}
