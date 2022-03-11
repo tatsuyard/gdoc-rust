@@ -38,7 +38,6 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
 
     tasks.push(task);
     serde_json::to_writer(file, &tasks);
-
     Ok(());
 }
 
