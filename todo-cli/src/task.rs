@@ -35,7 +35,7 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
         Err(e) if e.is_eof() => Vec::new(),
         Err(e) => Err(e)?,
     };
-
+    // Rewind the file after reading from it.
     file.seek(SeekForm::Start(0))?;
 
     tasks.push(task);
