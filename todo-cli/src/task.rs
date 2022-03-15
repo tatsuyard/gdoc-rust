@@ -38,6 +38,7 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
     // Rewind the file after reading from it.
     file.seek(SeekForm::Start(0))?;
 
+    // Write the modified task list back into the file.
     tasks.push(task);
     serde_json::to_writer(file, &tasks);
     Ok(());
