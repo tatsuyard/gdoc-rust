@@ -44,6 +44,9 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
 }
 
 pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> {
-    let file = OpenOptions::new().read(true).write(true);
+    let file = OpenOptions::new()
+        .read(true)
+        .write(true)
+        .open(journal_path)?;
 }
 pub fn list_tasks(journal_path: PathBuf) -> Result<()> {}
