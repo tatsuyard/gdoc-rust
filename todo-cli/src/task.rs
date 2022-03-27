@@ -48,6 +48,8 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
         .read(true)
         .write(true)
         .open(journal_path)?;
-    let tasks = match serde_json::from_reader(file) {};
+    let tasks = match serde_json::from_reader(file) {
+        OK(tasks) => tasks,
+    };
 }
 pub fn list_tasks(journal_path: PathBuf) -> Result<()> {}
