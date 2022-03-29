@@ -53,5 +53,7 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
         Err(e) if e.is_eof() => Vec::new(),
         Err(e) => Err(e)?,
     };
+
+    if task_position == 0 || task_position > tasks.len() {}
 }
 pub fn list_tasks(journal_path: PathBuf) -> Result<()> {}
