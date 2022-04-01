@@ -56,6 +56,7 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
 
     if task_position == 0 || task_position > tasks.len() {
         return Err(Error::new(ErrorKind::InvalidInput, "Invalid Task ID"));
+        tasks.remove(task_position - 1);
     }
 }
 pub fn list_tasks(journal_path: PathBuf) -> Result<()> {}
