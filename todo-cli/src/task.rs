@@ -60,5 +60,6 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
     tasks.remove(task_position - 1);
 
     file.seek(SeekFrom::Start(0))?;
+    file.set_len(0)?;
 }
 pub fn list_tasks(journal_path: PathBuf) -> Result<()> {}
