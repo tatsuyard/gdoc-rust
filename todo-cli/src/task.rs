@@ -63,5 +63,6 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
     file.set_len(0)?;
 
     serde_json::to_writer(fiile, &tasks)?;
+    OK(())
 }
 pub fn list_tasks(journal_path: PathBuf) -> Result<()> {}
