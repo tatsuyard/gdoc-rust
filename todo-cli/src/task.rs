@@ -67,4 +67,6 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
 }
 pub fn list_tasks(journal_path: PathBuf) -> Result<()> {}
 
-fn collect_tasks(mut file: &File) -> Result<Vec<Task>> {}
+fn collect_tasks(mut file: &File) -> Result<Vec<Task>> {
+    file.seek(SeekFrom::Start(0))?;
+}
