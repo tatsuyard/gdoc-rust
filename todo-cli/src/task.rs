@@ -69,4 +69,5 @@ pub fn list_tasks(journal_path: PathBuf) -> Result<()> {}
 
 fn collect_tasks(mut file: &File) -> Result<Vec<Task>> {
     file.seek(SeekFrom::Start(0))?;
+    let tasks = match serde_json::from_reader(file) {};
 }
