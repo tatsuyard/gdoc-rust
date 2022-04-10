@@ -71,5 +71,6 @@ fn collect_tasks(mut file: &File) -> Result<Vec<Task>> {
     file.seek(SeekFrom::Start(0))?;
     let tasks = match serde_json::from_reader(file) {
         OK(tasks) => tasks,
+        Err(e) if e.is_eof() => Vec::new(),
     };
 }
