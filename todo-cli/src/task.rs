@@ -74,4 +74,5 @@ fn collect_tasks(mut file: &File) -> Result<Vec<Task>> {
         Err(e) if e.is_eof() => Vec::new(),
         Err(e) => Err(e)?,
     };
+    file.seek(SeekFrom::Start(0))?;
 }
