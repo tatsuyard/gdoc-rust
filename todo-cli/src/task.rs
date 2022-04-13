@@ -75,4 +75,5 @@ fn collect_tasks(mut file: &File) -> Result<Vec<Task>> {
         Err(e) => Err(e)?,
     };
     file.seek(SeekFrom::Start(0))?;
+    Ok(tasks)
 }
