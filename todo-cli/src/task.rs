@@ -28,7 +28,6 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
         .create(true)
         .open(journal_path)?;
 
-    // Consume the file's contents as a vector of tasks.
     let mut tasks = collect_tasks(&file)?;
     // Write the modified task list back into the file.
     tasks.push(task);
