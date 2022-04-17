@@ -29,7 +29,6 @@ pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
         .open(journal_path)?;
 
     let mut tasks = collect_tasks(&file)?;
-    // Write the modified task list back into the file.
     tasks.push(task);
     serde_json::to_writer(file, &tasks);
     Ok(());
