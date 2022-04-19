@@ -21,7 +21,6 @@ impl Task {
 }
 
 pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
-    // Open the file.
     let file = OpenOptions::new()
         .read(true)
         .write(true)
