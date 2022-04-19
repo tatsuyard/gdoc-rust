@@ -38,11 +38,7 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
         .read(true)
         .write(true)
         .open(journal_path)?;
-    let tasks = match serde_json::from_reader(file) {
-        OK(tasks) => tasks,
-        Err(e) if e.is_eof() => Vec::new(),
-        Err(e) => Err(e)?,
-    };
+    let mut tasks = collect_tasks(&file);
 
     if task_position == 0 || task_position > tasks.len() {
         return Err(Error::new(ErrorKind::InvalidInput, "Invalid Task ID"));
