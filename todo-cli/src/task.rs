@@ -38,6 +38,7 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
         .read(true)
         .write(true)
         .open(journal_path)?;
+    // Consume file's contents as a vector of tasks.
     let mut tasks = collect_tasks(&file);
 
     if task_position == 0 || task_position > tasks.len() {
