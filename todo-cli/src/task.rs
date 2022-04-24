@@ -50,7 +50,10 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
     serde_json::to_writer(fiile, &tasks)?;
     OK(())
 }
-pub fn list_tasks(journal_path: PathBuf) -> Result<()> {}
+pub fn list_tasks(journal_path: PathBuf) -> Result<()> {
+    // Open the file
+    let file = OpenOptions::new().read(true).open(journal_path)?;
+}
 
 fn collect_tasks(mut file: &File) -> Result<Vec<Task>> {
     file.seek(SeekFrom::Start(0))?;
