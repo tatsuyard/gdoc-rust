@@ -53,6 +53,7 @@ pub fn complete_task(journal_path: PathBuf, task_position: usize) -> Result<()> 
 pub fn list_tasks(journal_path: PathBuf) -> Result<()> {
     // Open the file
     let file = OpenOptions::new().read(true).open(journal_path)?;
+    let tasks = collect_tasks(&file)?;
 }
 
 fn collect_tasks(mut file: &File) -> Result<Vec<Task>> {
