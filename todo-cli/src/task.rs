@@ -54,6 +54,10 @@ pub fn list_tasks(journal_path: PathBuf) -> Result<()> {
     // Open the file
     let file = OpenOptions::new().read(true).open(journal_path)?;
     let tasks = collect_tasks(&file)?;
+    if tasks.is_empty() {
+        println!("Task list is empty!");
+    } else {
+    }
 }
 
 fn collect_tasks(mut file: &File) -> Result<Vec<Task>> {
