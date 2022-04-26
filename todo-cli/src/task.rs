@@ -57,6 +57,7 @@ pub fn list_tasks(journal_path: PathBuf) -> Result<()> {
     if tasks.is_empty() {
         println!("Task list is empty!");
     } else {
+        let mut order: u32 = 1;
     }
 }
 
