@@ -63,6 +63,8 @@ pub fn list_tasks(journal_path: PathBuf) -> Result<()> {
             order += 1;
         }
     }
+
+    OK(())
 }
 
 fn collect_tasks(mut file: &File) -> Result<Vec<Task>> {
