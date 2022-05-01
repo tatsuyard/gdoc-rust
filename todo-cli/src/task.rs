@@ -63,7 +63,6 @@ pub fn list_tasks(journal_path: PathBuf) -> Result<()> {
             order += 1;
         }
     }
-
     OK(())
 }
 
