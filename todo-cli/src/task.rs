@@ -21,6 +21,8 @@ impl Task {
     }
 }
 
+impl fmt::Display for Task {}
+
 pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
     let file = OpenOptions::new()
         .read(true)
