@@ -22,7 +22,9 @@ impl Task {
 }
 
 impl fmt::Display for Task {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {}
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let created_at = self.created_at.with_timezone(&Local).format("%F %H:%M");
+    }
 }
 
 pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
