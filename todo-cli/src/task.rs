@@ -21,7 +21,9 @@ impl Task {
     }
 }
 
-impl fmt::Display for Task {}
+impl fmt::Display for Task {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {}
+}
 
 pub fn add_task(journal_path: PathBuf, task: Task) -> Result<()> {
     let file = OpenOptions::new()
