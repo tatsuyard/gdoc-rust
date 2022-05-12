@@ -6,6 +6,9 @@ use cli::{Action::*, CommandLineArgs};
 use tasks::Task;
 
 fn main() {
-    let CommandLineArgs { action } = CommandLineArgs::from_args();
+    let CommandLineArgs {
+        action,
+        journal_file,
+    } = CommandLineArgs::from_args();
     println!("{:#?}", cli::CommandLineArgs::from_args());
 }
