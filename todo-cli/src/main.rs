@@ -12,5 +12,6 @@ fn main() {
     } = CommandLineArgs::from_args();
 
     let journal_file = journal_file.expect("Failed to find journal file");
+    match action {}
     println!("{:#?}", cli::CommandLineArgs::from_args());
 }
