@@ -14,6 +14,7 @@ fn main() {
     let journal_file = journal_file.expect("Failed to find journal file");
     match action {
         Add { text } => tasks::add_task(journal_file, Task::new(text)),
+        List => tasks::list_tasks(journal_file),
     }
     println!("{:#?}", cli::CommandLineArgs::from_args());
 }
