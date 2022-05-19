@@ -18,5 +18,4 @@ fn main() {
         Done { position } => tasks::complete_task(journal_file, position),
     }
     .expect("Failed to perform action");
-    println!("{:#?}", cli::CommandLineArgs::from_args());
 }
