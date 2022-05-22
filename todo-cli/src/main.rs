@@ -3,6 +3,7 @@ use structopt::StructOpt;
 mod tasks;
 
 use cli::{Action::*, CommandLineArgs};
+use std::path::PathBuf;
 use tasks::Task;
 
 fn main() {
