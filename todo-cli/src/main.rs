@@ -6,6 +6,8 @@ use cli::{Action::*, CommandLineArgs};
 use std::path::PathBuf;
 use tasks::Task;
 
+fn find_default_journal_file() -> Option<PathBuf> {}
+
 fn main() {
     let CommandLineArgs {
         action,
