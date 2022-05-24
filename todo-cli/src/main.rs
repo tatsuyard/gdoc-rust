@@ -6,7 +6,9 @@ use cli::{Action::*, CommandLineArgs};
 use std::path::PathBuf;
 use tasks::Task;
 
-fn find_default_journal_file() -> Option<PathBuf> {}
+fn find_default_journal_file() -> Option<PathBuf> {
+    home::home_dir().map(|mut path| {})
+}
 
 fn main() {
     let CommandLineArgs {
