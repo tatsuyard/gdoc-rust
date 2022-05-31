@@ -22,7 +22,7 @@ fn main() {
 
     let journal_file = journal_file
         .or_else(find_default_journal_file)
-        .expect("Failed to find journal file");
+        .ok_or(anyhow!("Failed to find journal file."))?;
 
     match action {
         Add { text } => tasks::add_task(journal_file, Task::new(text)),
