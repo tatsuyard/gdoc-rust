@@ -28,6 +28,6 @@ fn main() {
         Add { text } => tasks::add_task(journal_file, Task::new(text)),
         List => tasks::list_tasks(journal_file),
         Done { position } => tasks::complete_task(journal_file, position),
-    }
-    .expect("Failed to perform action");
+    }?;
+    Ok(())
 }
