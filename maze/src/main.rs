@@ -1,3 +1,7 @@
+use rand::Rng;
+
+const MAP_N: usize = 25;
+
 fn main() {
-    println!("Hello, world!");
+    let mut rng = rand::thread_rng();
 }
