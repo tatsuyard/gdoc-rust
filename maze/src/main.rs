@@ -7,5 +7,6 @@ fn main() {
     let mut maze = [[0; MAP_N]; MAP_N];
     for n in 0..MAP_N {
         maze[n][0] = 1;
+        maze[0][n] = 1;
     }
 }
