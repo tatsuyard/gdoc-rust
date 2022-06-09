@@ -8,5 +8,6 @@ fn main() {
     for n in 0..MAP_N {
         maze[n][0] = 1;
         maze[0][n] = 1;
+        maze[n][MAP_N - 1] = 1;
     }
 }
