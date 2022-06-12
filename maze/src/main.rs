@@ -9,5 +9,6 @@ fn main() {
         maze[n][0] = 1;
         maze[0][n] = 1;
         maze[n][MAP_N - 1] = 1;
+        maze[MAP_N - 1][n] = 1;
     }
 }
