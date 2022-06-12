@@ -11,4 +11,12 @@ fn main() {
         maze[n][MAP_N - 1] = 1;
         maze[MAP_N - 1][n] = 1;
     }
+
+    for y in 2..MAP_N - 2 {
+        for x in 2..MAP_N - 2 {
+            if x % 2 == 1 || y % 2 == 1 {
+                continue;
+            }
+        }
+    }
 }
