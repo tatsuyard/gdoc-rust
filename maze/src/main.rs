@@ -17,6 +17,7 @@ fn main() {
             if x % 2 == 1 || y % 2 == 1 {
                 continue;
             }
+            maze[y][x] = 1;
         }
     }
 }
