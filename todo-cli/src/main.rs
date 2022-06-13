@@ -1,10 +1,10 @@
 mod cli;
 use anyhow::anyhow;
 use structopt::StructOpt;
-mod tasks;
+mod task;
 use cli::{Action::*, CommandLineArgs};
 use std::path::PathBuf;
-use tasks::Task;
+use task::Task;
 
 fn find_default_journal_file() -> Option<PathBuf> {
     home::home_dir().map(|mut path| {
@@ -28,5 +28,5 @@ fn main() {
         List => tasks::list_tasks(journal_file),
         Done { position } => tasks::complete_task(journal_file, position),
     }?;
-    Ok(())
+    Ok(());
 }

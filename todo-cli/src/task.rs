@@ -5,7 +5,6 @@ use std::fmt;
 use std::fs::{File, OpenOptions};
 use std::io::{Error, ErrorKind, Result, Seek, SeekFrom};
 use std::path::PathBuf;
-
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Task {
     pub text: String,
