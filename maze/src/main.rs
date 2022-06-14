@@ -18,6 +18,7 @@ fn main() {
                 continue;
             }
             maze[y][x] = 1;
+            let r = rng.gen_range(0..=3);
         }
     }
 }
