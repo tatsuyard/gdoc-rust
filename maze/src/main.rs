@@ -21,6 +21,7 @@ fn main() {
             let r = rng.gen_range(0..=3);
             match r {
                 0 => maze[y - 1][x] = 1,
+                1 => maze[y + 1][x] = 1,
             }
         }
     }
