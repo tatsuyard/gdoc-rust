@@ -22,6 +22,7 @@ fn main() {
             match r {
                 0 => maze[y - 1][x] = 1,
                 1 => maze[y + 1][x] = 1,
+                2 => maze[y][x - 1] = 1,
             }
         }
     }
