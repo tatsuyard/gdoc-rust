@@ -23,7 +23,16 @@ fn main() {
                 0 => maze[y - 1][x] = 1,
                 1 => maze[y + 1][x] = 1,
                 2 => maze[y][x - 1] = 1,
+                3 => maze[y][x + 1] = 1,
+                _ => {}
             }
         }
+    }
+    let tiles = ["  ", "ZZ"];
+    for y in 0..MAP_N {
+        for x in 0..MAP_N {
+            print!("{}", tiles[maze[y][x]]);
+        }
+        println!("");
     }
 }
