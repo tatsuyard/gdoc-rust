@@ -1,5 +1,5 @@
 use rand::seq::SliceRandom;
 
 fn main() {
-    println!("Hello, world!");
+    let mut nums = [0; 75];
 }
