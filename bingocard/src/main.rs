@@ -6,4 +6,5 @@ fn main() {
         nums[i - 1] = i;
     }
     let mut rng = rand::thread_rng();
+    nums.shuffle(&mut rng);
 }
