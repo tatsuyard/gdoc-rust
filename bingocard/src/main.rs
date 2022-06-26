@@ -7,4 +7,10 @@ fn main() {
     }
     let mut rng = rand::thread_rng();
     nums.shuffle(&mut rng);
+
+    for y in 0..5 {
+        for x in 0..5 {
+            let i = y * 5 + x;
+        }
+    }
 }
