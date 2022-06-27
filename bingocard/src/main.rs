@@ -13,6 +13,8 @@ fn main() {
             let i = y * 5 + x;
             if i == 12 {
                 print!(" *,");
+            } else {
+                print!("{:3},", nums[i]);
             }
         }
     }
