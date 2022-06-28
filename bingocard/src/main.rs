@@ -17,5 +17,6 @@ fn main() {
                 print!("{:3},", nums[i]);
             }
         }
+        println!("");
     }
 }
