@@ -1,9 +1,9 @@
 use rand::seq::SliceRandom;
 
 fn main() {
-    let mut nums = [0; 75];
+    let mut nums = vec![];
     for i in 1..=75 {
-        nums[i - 1] = i;
+        nums.push(i);
     }
     let mut rng = rand::thread_rng();
     nums.shuffle(&mut rng);
