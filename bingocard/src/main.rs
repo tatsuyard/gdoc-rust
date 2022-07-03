@@ -17,16 +17,4 @@ fn main() {
             println!("");
         }
     }
-
-    for y in 0..5 {
-        for x in 0..5 {
-            let i = y * 5 + x;
-            if i == 12 {
-                print!(" *,");
-            } else {
-                print!("{:3},", nums[i]);
-            }
-        }
-        println!("");
-    }
 }
