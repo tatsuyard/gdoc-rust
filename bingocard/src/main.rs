@@ -14,6 +14,7 @@ fn main() {
             print!("{:3},", nums[i]);
         }
         if i % 5 == 4 {
+            print!("{}", i);
             println!("");
         }
     }
