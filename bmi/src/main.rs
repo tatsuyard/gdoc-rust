@@ -6,6 +6,8 @@ fn main() {
     println!("BMI={:.1}", bmi);
     if bmi < 18.5 {
         println!("低体重");
+    } else if bmi < 25.0 {
+        println!("普通体重");
     }
 }
 
