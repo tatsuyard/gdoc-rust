@@ -10,6 +10,8 @@ fn main() {
         println!("普通体重");
     } else if bmi < 30.0 {
         println!("肥満1度");
+    } else if bmi < 35.0 {
+        println!("肥満2度");
     }
 }
 
