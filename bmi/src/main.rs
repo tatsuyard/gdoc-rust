@@ -13,7 +13,9 @@ fn main() {
     } else if bmi < 35.0 {
         println!("肥満2度");
     } else if bmi < 40.0 {
-        println!("肥満2度");
+        println!("肥満3度");
+    } else {
+        println!("肥満4度");
     }
 }
 
