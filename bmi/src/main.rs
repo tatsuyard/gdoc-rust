@@ -21,4 +21,5 @@ fn main() {
 
 fn input(prompt: &str) -> f64 {
     println!("{}", prompt);
+    let mut s = String::new();
 }
