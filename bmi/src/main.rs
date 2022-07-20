@@ -23,4 +23,6 @@ fn input(prompt: &str) -> f64 {
     println!("{}", prompt);
     let mut s = String::new();
     std::io::stdin().read_line(&mut s).expect("入力エラー");
+
+    return s.trim().parse().expect("数値変換エラー");
 }
