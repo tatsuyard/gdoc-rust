@@ -6,5 +6,6 @@ fn main() {
         if height > 0.0 {
             break;
         }
+        println!("標準体重は{:.1}kgです", weight);
     }
 }
