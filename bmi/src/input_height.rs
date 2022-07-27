@@ -9,3 +9,5 @@ fn main() {
         println!("標準体重は{:.1}kgです", weight);
     }
 }
+
+fn input_str() -> String {}
