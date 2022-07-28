@@ -10,4 +10,6 @@ fn main() {
     }
 }
 
-fn input_str() -> String {}
+fn input_str() -> String {
+    let mut s = String::new();
+}
