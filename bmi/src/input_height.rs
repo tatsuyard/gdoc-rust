@@ -11,4 +11,5 @@ fn main() {
 }
 fn input_str() -> String {
     let mut s = String::new();
+    std::io::stdin().read_line(&mut s).expect("入力エラー");
 }
