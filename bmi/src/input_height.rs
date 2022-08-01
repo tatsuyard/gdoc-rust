@@ -14,3 +14,7 @@ fn input_str() -> String {
     std::io::stdin().read_line(&mut s).expect("入力エラー");
     s.trim_end().to_string()
 }
+
+fn input_f(def: f64) -> {
+    
+}
