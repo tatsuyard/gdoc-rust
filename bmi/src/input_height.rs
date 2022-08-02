@@ -16,5 +16,5 @@ fn input_str() -> String {
 }
 
 fn input_f(def: f64) -> {
-    
+    let s = input_str();
 }
