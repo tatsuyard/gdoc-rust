@@ -17,4 +17,8 @@ fn input_str() -> String {
 
 fn input_f(def: f64) -> {
     let s = input_str();
+    match s.trim().parse() {
+        Ok(v) => v,
+        Err(_) => def,
+    }
 }
