@@ -6,9 +6,9 @@ fn main() {
         if height > 0.0 {
             break;
         }
-        let weight = 22.0 * (height / 100.0).powf(2.0);
-        println!("標準体重は{:.1}kgです", weight);
     }
+    let weight = 22.0 * (height / 100.0).powf(2.0);
+    println!("標準体重は{:.1}kgです", weight);
 }
 fn input_str() -> String {
     let mut s = String::new();
