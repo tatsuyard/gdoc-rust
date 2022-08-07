@@ -6,6 +6,7 @@ fn main() {
         if height > 0.0 {
             break;
         }
+        println!("正しい数値を入力してください");
     }
     let weight = 22.0 * (height / 100.0).powf(2.0);
     println!("標準体重は{:.1}kgです", weight);
