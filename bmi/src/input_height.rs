@@ -18,7 +18,7 @@ fn input_str() -> String {
     s.trim_end().to_string()
 }
 
-fn input_f(def: f64) -> f64 {
+fn input_f(_def: f64) -> f64 {
     let s = input_str();
     s.trim().parse().unwrap()
 }
