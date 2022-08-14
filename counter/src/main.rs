@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
-    println!("Hello, world!");
+    let mut c_map = HashMap::new();
 }
