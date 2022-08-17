@@ -6,4 +6,5 @@ fn main() {
     c_map.insert("A", 0);
     c_map.insert("B", 0);
     c_map.insert("C", 0);
+    for w in V_DATA.split(',') {}
 }
