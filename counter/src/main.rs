@@ -9,4 +9,5 @@ fn main() {
     for w in V_DATA.split(',') {
         c_map.insert(w, c_map[w] + 1);
     }
+    for k in ["A", "B", "C"] {}
 }
