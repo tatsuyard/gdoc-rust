@@ -15,4 +15,5 @@ fn main() {
         "霜月",
         "師走",
     ];
+    let mut tuki_map: HashMap<&str, usize> = HashMap::new();
 }
