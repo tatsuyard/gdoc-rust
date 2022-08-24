@@ -16,4 +16,5 @@ fn main() {
         "師走",
     ];
     let mut tuki_map: HashMap<&str, usize> = HashMap::new();
+    for (i, v) in tuki.iter().enumerate() {}
 }
