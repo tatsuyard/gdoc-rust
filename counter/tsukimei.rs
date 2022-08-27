@@ -19,4 +19,5 @@ fn main() {
     for (i, v) in tuki.iter().enumerate() {
         tuki_map.insert(v, i + 1);
     }
+    println!("水無月 = {}月", tuki_map["水無月"]);
 }
