@@ -20,4 +20,5 @@ fn main() {
         tuki_map.insert(v, i + 1);
     }
     println!("水無月 = {}月", tuki_map["水無月"]);
+    println!("神無月 = {}月", tuki_map["神無月"]);
 }
