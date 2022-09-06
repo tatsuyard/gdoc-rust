@@ -5,6 +5,7 @@ fn main() {
     map.insert("A", 30);
     map.insert("B", 50);
     if map.get("D") == None {
+        println!("Dは存在しない")
     } else {
     }
 }
