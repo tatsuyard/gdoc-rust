@@ -7,5 +7,6 @@ fn main() {
     if map.get("D") == None {
         println!("Dは存在しない")
     } else {
+        println!("D={}", map["D"]);
     }
 }
