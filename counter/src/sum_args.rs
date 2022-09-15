@@ -10,5 +10,6 @@ fn main() {
             Ok(v) => v,
             Err(_) => 0.0,
         };
+        total += num;
     }
 }
