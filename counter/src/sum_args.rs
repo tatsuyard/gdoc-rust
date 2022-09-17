@@ -11,5 +11,6 @@ fn main() {
             Err(_) => 0.0,
         };
         total += num;
+        println!("{}", total);
     }
 }
