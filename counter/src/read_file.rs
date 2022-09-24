@@ -7,4 +7,5 @@ fn main() {
         println!("入力ファイルを指定してください。");
         return;
     }
+    let filename = &args[1];
 }
