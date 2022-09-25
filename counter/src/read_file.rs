@@ -9,4 +9,5 @@ fn main() {
     }
     let filename = &args[1];
     let text = fs::read_to_string(filename).unwrap();
+    println!("{}", text);
 }
