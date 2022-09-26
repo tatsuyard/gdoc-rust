@@ -7,6 +7,7 @@ fn main() {
         println!("入力ファイルを指定してください。");
         return;
     }
+
     let filename = &args[1];
     let text = fs::read_to_string(filename).unwrap();
     println!("{}", text);
