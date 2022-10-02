@@ -8,5 +8,6 @@ fn main() {
             continue;
         }
         let text = fs::read_to_string(fname).unwrap();
+        let lines = text.split('¥n');
     }
 }
