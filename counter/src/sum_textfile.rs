@@ -11,8 +11,10 @@ fn main() {
         let lines = text.split('¥n');
         for line in lines {
             let n:f64 = match line.parse() {
-
+                Ok(v) => v,
+                Err(_) => 0.0,
             };
+            total += n;
         }
     }
 }
