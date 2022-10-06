@@ -8,9 +8,9 @@ fn main() {
             continue;
         }
         let text = fs::read_to_string(fname).unwrap();
-        let lines = text.split('¥n');
+        let lines = text.split('\n');
         for line in lines {
-            let n:f64 = match line.parse() {
+            let n: f64 = match line.parse() {
                 Ok(v) => v,
                 Err(_) => 0.0,
             };
