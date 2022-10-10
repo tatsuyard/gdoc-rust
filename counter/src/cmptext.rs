@@ -5,4 +5,6 @@ fn main() {
 
     let astr = fs::read_to_string(afile).unwrap();
     let bstr = fs::read_to_string(bfile).unwrap();
+
+    let astr = astr.trim();
 }
