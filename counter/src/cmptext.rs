@@ -7,4 +7,5 @@ fn main() {
     let bstr = fs::read_to_string(bfile).unwrap();
 
     let astr = astr.trim();
+    let bstr = bstr.trim();
 }
