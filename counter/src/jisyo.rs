@@ -8,5 +8,6 @@ fn main() {
 
     if args.len() < 2 {
         println!("[USAGE] jisyo word");
+        return;
     }
 }
