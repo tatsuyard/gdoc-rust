@@ -10,4 +10,6 @@ fn main() {
         println!("[USAGE] jisyo word");
         return;
     }
+
+    let word = &args[1];
 }
