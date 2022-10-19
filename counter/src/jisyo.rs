@@ -12,4 +12,5 @@ fn main() {
     }
 
     let word = &args[1];
+    let fp = file::open(dicfile).unwrap();
 }
