@@ -13,4 +13,5 @@ fn main() {
 
     let word = &args[1];
     let fp = file::open(dicfile).unwrap();
+    let reader = BufReader::new(fp);
 }
