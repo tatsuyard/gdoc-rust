@@ -19,5 +19,6 @@ fn main() {
         if line.find(word) == None {
             continue;
         }
+        println!("{}", line);
     }
 }
