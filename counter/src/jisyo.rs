@@ -16,9 +16,7 @@ fn main() {
     let reader = BufReader::new(fp);
     for line in reader.lines() {
         let line = line.unwrap();
-        if line.find(word) == None {
-            continue;
-        }
+
         println!("{}", line);
     }
 }
