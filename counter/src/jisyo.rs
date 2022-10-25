@@ -14,6 +14,7 @@ fn main() {
     let word = &args[1];
     let fp = file::open(dicfile).unwrap();
     let reader = BufReader::new(fp);
+
     for line in reader.lines() {
         let line = line.unwrap();
 
