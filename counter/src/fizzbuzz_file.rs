@@ -5,5 +5,6 @@ fn main() {
     let filename = "fizzbuzz_file_result.txt";
     {
         let fp = file::create(filename).unwrap();
+        let mut writer = BufWriter::new(fp);
     }
 }
