@@ -10,6 +10,8 @@ fn main() {
             let mut line = format!("{}\n", i);
             if (i % 3 == 0) && (i % 5 == 0) {
                 line = String::from("FizzBuzz\n");
+            } else if i % 3 == 0 {
+                line = String::from("Fizz\n");
             }
         }
     }
