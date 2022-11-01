@@ -12,6 +12,8 @@ fn main() {
                 line = String::from("FizzBuzz\n");
             } else if i % 3 == 0 {
                 line = String::from("Fizz\n");
+            } else if i % 5 == 0 {
+                line = String::from("Buzz\n");
             }
         }
     }
