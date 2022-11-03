@@ -15,6 +15,7 @@ fn main() {
             } else if i % 5 == 0 {
                 line = String::from("Buzz\n");
             }
+            let bytes = line.as_bytes();
         }
     }
 }
