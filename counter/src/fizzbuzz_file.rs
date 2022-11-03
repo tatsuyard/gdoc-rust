@@ -16,6 +16,7 @@ fn main() {
                 line = String::from("Buzz\n");
             }
             let bytes = line.as_bytes();
+            writer.write(byte).unwrap();
         }
     }
 }
