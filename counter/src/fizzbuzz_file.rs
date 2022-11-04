@@ -19,4 +19,6 @@ fn main() {
             writer.write(byte).unwrap();
         }
     }
+
+    let s = fs::read_to_string(filename).unwrap();
 }
