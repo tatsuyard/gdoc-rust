@@ -21,4 +21,5 @@ fn main() {
     }
 
     let s = fs::read_to_string(filename).unwrap();
+    println!("{}", s);
 }
