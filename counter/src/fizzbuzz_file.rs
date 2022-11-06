@@ -6,6 +6,7 @@ fn main() {
     {
         let fp = file::create(filename).unwrap();
         let mut writer = BufWriter::new(fp);
+
         for i in 1..=100 {
             let mut line = format!("{}\n", i);
             if (i % 3 == 0) && (i % 5 == 0) {
