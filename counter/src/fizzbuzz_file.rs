@@ -4,7 +4,7 @@ use std::io::{BufWriter, Write};
 fn main() {
     let filename = "fizzbuzz_file_result.txt";
     {
-        let fp = file::create(filename).unwrap();
+        let fp = File::create(filename).unwrap();
         let mut writer = BufWriter::new(fp);
 
         for i in 1..=100 {
@@ -17,7 +17,7 @@ fn main() {
                 line = String::from("Buzz\n");
             }
             let bytes = line.as_bytes();
-            writer.write(byte).unwrap();
+            writer.write(bytes).unwrap();
         }
     }
 
