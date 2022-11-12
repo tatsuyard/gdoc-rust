@@ -11,6 +11,8 @@ fn get_fizzbuzz(max: u32) -> String {
     for i in 1..=max {
         if (i % 3 == 0) && (i % 5 == 0) {
             result += "FizzBuzz\n";
+        } else if (i % 3 == 0) {
+            result += "Fizz\n";
         }
     }
 }
