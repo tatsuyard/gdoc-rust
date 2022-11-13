@@ -13,6 +13,8 @@ fn get_fizzbuzz(max: u32) -> String {
             result += "FizzBuzz\n";
         } else if (i % 3 == 0) {
             result += "Fizz\n";
+        } else if (i % 5 == 0) {
+            result += "Buzz\n";
         }
     }
 }
