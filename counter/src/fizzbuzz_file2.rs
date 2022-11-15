@@ -19,4 +19,5 @@ fn get_fizzbuzz(max: u32) -> String {
             result += &format!("{}\n", i);
         }
     }
+    result
 }
