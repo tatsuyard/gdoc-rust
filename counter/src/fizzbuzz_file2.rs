@@ -6,6 +6,7 @@ fn main() {
     let data = get_fizzbuzz(100);
     // ファイルを生成
     let mut fp = File::create(filename).unwrap();
+    let bytes = data.as_bytes();
 }
 
 fn get_fizzbuzz(max: u32) -> String {
