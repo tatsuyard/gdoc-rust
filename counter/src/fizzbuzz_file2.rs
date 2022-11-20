@@ -7,6 +7,7 @@ fn main() {
     // ファイルを生成
     let mut fp = File::create(filename).unwrap();
     println!("{}", fp);
+
     let bytes = data.as_bytes();
     fp.write_all(bytes).unwrap();
 }
