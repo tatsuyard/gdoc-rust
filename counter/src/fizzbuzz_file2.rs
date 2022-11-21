@@ -5,7 +5,7 @@ fn main() {
     let filename = "fizzbuzz_file2_result.txt";
     let data = get_fizzbuzz(100);
     // ファイルを生成
-    let mut fp = File::create(filename).unwrap();
+    let mut fp = File::create(filename).unwrap_or("失敗した時の値".to_string());
     println!("{}", fp);
 
     let bytes = data.as_bytes();
