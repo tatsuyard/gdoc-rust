@@ -6,4 +6,5 @@ fn main() {
         println!("findfile (path) (keyword)");
         return;
     }
+    let target_dir = &args[1];
 }
