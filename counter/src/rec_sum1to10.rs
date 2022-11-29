@@ -7,4 +7,5 @@ fn main() {
         return;
     }
     let target_dir = &args[1];
+    let keyword = &args[2];
 }
