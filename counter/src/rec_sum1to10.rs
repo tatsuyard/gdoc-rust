@@ -9,4 +9,5 @@ fn main() {
     let target_dir = &args[1];
     let keyword = &args[2];
     let target = path::PathBuf::from(target_dir);
+    findfile(&target, keyword);
 }
