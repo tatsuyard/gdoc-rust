@@ -14,4 +14,7 @@ fn main() {
 
 fn findfile(target: &path::PathBuf, keyword: &str) {
     let files = target.read_dir().expect("存在しないパス");
+    for dir_entry in files {
+        let path = dir_entry.unwrap().path();
+    }
 }
