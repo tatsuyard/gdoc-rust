@@ -20,5 +20,6 @@ fn findfile(target: &path::PathBuf, keyword: &str) {
             findfile(&path, keyword);
             continue;
         }
+        let fname = path.file_name().unwrap().to_string_lossy();
     }
 }
