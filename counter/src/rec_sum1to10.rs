@@ -21,5 +21,8 @@ fn findfile(target: &path::PathBuf, keyword: &str) {
             continue;
         }
         let fname = path.file_name().unwrap().to_string_lossy();
+        if None == fname.find(keyword) {
+            continue;
+        };
     }
 }
