@@ -24,5 +24,6 @@ fn findfile(target: &path::PathBuf, keyword: &str) {
         if None == fname.find(keyword) {
             continue;
         };
+        println!("{}", path.to_string_lossy());
     }
 }
