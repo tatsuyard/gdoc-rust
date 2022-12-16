@@ -6,4 +6,5 @@ fn main() {
         target_dir = &args[1];
     }
     let target = path::PathBuf::from(target_dir);
+    println!("{}", target_dir);
 }
