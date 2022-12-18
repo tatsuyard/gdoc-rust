@@ -7,4 +7,5 @@ fn main() {
     }
     let target = path::PathBuf::from(target_dir);
     println!("{}", target_dir);
+    tree(&target, 0);
 }
