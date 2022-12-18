@@ -9,3 +9,7 @@ fn main() {
     println!("{}", target_dir);
     tree(&target, 0);
 }
+
+fn tree(target: &path::PathBuf, level: isize) {
+    let files = target.read_dir().expect("存在しないパス");
+}
