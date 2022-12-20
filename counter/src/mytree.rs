@@ -14,5 +14,8 @@ fn tree(target: &path::PathBuf, level: isize) {
     let files = target.read_dir().expect("存在しないパス");
     for ent in files {
         let path = ent.unwrap().path();
+        for _ in 1..=level {
+            print!("| ");
+        }
     }
 }
