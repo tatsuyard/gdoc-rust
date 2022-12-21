@@ -17,5 +17,6 @@ fn tree(target: &path::PathBuf, level: isize) {
         for _ in 1..=level {
             print!("| ");
         }
+        let fname = path.file_name().unwrap().to_string_lossy();
     }
 }
