@@ -21,6 +21,7 @@ fn tree(target: &path::PathBuf, level: isize) {
         let fname = path.file_name().unwrap().to_string_lossy();
         if path.is_dir() {
             println!("|-- <{}>", fname);
+            tree(&path, level + 1);
         }
     }
 }
