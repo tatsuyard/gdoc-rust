@@ -22,6 +22,8 @@ fn tree(target: &path::PathBuf, level: isize) {
         if path.is_dir() {
             println!("|-- <{}>", fname);
             tree(&path, level + 1);
+            continue;
         }
+        println!("|-- {}", fname);
     }
 }
