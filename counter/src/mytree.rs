@@ -2,7 +2,6 @@ use std::{env, path};
 fn main() {
     let args: Vec<String> = env::args().collect();
     let mut target_dir = ".";
-    println!("@@@@");
 
     if args.len() >= 2 {
         target_dir = &args[1];
