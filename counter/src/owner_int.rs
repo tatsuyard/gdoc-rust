@@ -1,6 +1,8 @@
 fn main() {
-    let g1 = 20;
-    let g2 = g1;
-    println!("{}", g1);
-    println!("{}", g2);
+    let mut g1 = String::from("過ちを見過ごす人は美しい");
+}
+
+fn show_message(message: String) -> String {
+    println!("{}", message);
+    return message;
 }
