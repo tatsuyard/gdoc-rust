@@ -1,9 +1,9 @@
-fn main() {
-    let g1 = String::from("過ちを見過ごす人は美しい");
-    show_message(&g1);
-    println!("{}", g1);
+fn gen_message() -> String {
+    let msg = String::from("過ちを見過ごす人は美しい");
+    return msg;
 }
 
-fn show_message(message: &String) {
-    println!("{}", message);
+fn main() {
+    let m = gen_message();
+    println!("{}", m);
 }
