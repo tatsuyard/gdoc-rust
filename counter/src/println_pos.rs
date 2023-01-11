@@ -3,4 +3,5 @@ fn main() {
     let month = 12;
     let day = 1;
     println!("JP:{0}/{1}/{2}", year, month, day);
+    println!("US:{1}/{2}/{0}", year, month, day);
 }
