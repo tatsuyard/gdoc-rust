@@ -1,11 +1,5 @@
 fn main() {
-    let year = 2023;
-    let month = 12;
-    let day = 1;
-    println!(
-        "{year}年{month}月{day}日",
-        day = day,
-        month = month,
-        year = year
-    );
+    println!("|{:>8}| #{:06x}", "red", 0xFF0000);
+    println!("|{:>8}| #{:06x}", "green", 0x00FF00);
+    println!("|{:>8}| #{:06x}", "blue", 0x0000FF);
 }
