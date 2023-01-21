@@ -14,4 +14,9 @@ fn print_tuple(item: &(&str, i64)) {
 
 fn print_and_sum_items(items: &Vec<Item>) -> i64 {
     let mut total = 0;
+    for it in items {
+        print_tuple(&it);
+        total += it.1;
+    }
+    total
 }
