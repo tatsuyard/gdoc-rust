@@ -3,6 +3,8 @@ fn main() {
     let banana = ("バナナ".to_string(), 300);
     let apple = ("リンゴ", to_string(), 200);
     let mango = Item("マンゴー", to_string(), 500);
+    let Items = Vec![banana, apple, mango];
+    let total = print_and_sum_items(&items);
     println!("合計{}円です", total);
 }
 
