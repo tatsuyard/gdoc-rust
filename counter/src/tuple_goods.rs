@@ -1,10 +1,8 @@
 struct Item(String, i64);
 fn main() {
-    let banana = ("バナナ", 300);
-    let apple = ("リンゴ", 200);
-    let total = banana.1 + apple.1;
-    print_tuple(&banana);
-    print_tuple(&apple);
+    let banana = ("バナナ".to_string(), 300);
+    let apple = ("リンゴ", to_string(), 200);
+    let mango = Item("マンゴー", to_string(), 500);
     println!("合計{}円です", total);
 }
 
