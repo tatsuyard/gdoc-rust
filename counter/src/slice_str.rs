@@ -1,5 +1,5 @@
 fn main() {
-    let s = String::from("beep");
-    let ss = &s[0..3];
-    println!("{}", ss);
+    let a = [0, 1, 2, 3, 4, 5];
+    let a_slice = &a[0..3];
+    println!("{:?}", a_slice);
 }
