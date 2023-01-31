@@ -1,5 +1,9 @@
-fn sum_slice(items: &[i64]) -> {
+fn sum_slice(items: &[i64]) -> i64 {
     let mut total = 0;
+    for i in items {
+        total += i;
+    }
+    total
 }
 
 fn main() {
