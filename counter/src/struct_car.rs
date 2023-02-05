@@ -10,4 +10,9 @@ fn main() {
         cc: 1500,
         color: 0xFF0000,
     };
+    let car2 = CarSpec {
+        model: 3002,
+        cc: 1200,
+        color: 0x0000FF,
+    };
 }
