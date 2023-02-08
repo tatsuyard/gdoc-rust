@@ -15,6 +15,6 @@ fn main() {
         cc: 1200,
         color: 0x0000FF,
     };
-    println!("car1: {}", {}cc, {:06x}, car1.model, car1.cc, car1.color);
-    println!("car2: {}", {}cc, {:06x}, car2.model, car2.cc, car2.color);
+    println!("car1: {}, {}cc, {:06x}", car1.model, car1.cc, car1.color);
+    println!("car2: {}, {}cc, {:06x}", car2.model, car2.cc, car2.color);
 }
