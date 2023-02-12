@@ -12,6 +12,7 @@ fn main() {
         weight: 65.0,
         height: 170.0,
     };
+    println!("Ichiro={:.1}", calc_bmi(&ichiro));
 }
 
 fn calc_bmi(body: &body) -> f64 {
