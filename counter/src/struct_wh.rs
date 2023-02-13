@@ -13,10 +13,10 @@ fn main() {
         height: 170.0,
     };
     println!("Ichiro={:.1}", calc_bmi(&ichiro));
-    println!("Jiro={:.}", calc_bmi(&jiro);)
+    println!("Jiro={:.}", calc_bmi(&jiro));
 }
 
-fn calc_bmi(body: &body) -> f64 {
+fn calc_bmi(body: &Body) -> f64 {
     let h = body.height / 100.0;
     body.weight / h.powf(2.0);
 }
