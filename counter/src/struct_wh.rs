@@ -6,7 +6,7 @@ struct Body {
 fn main() {
     let ichiro = Body {
         weight: 80.0,
-        height: 154.0,
+        height: 165.0,
     };
     let jiro = Body {
         weight: 65.0,
@@ -18,5 +18,5 @@ fn main() {
 
 fn calc_bmi(body: &Body) -> f64 {
     let h = body.height / 100.0;
-    body.weight / h.powf(2.0);
+    body.weight / h.powf(2.0)
 }
