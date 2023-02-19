@@ -9,4 +9,9 @@ fn main() {
     let weight = input("体重(kg)は？");
     let height = height_cm / 100.0;
     let bmi = weight / height.powf(2.0);
+    let bmi_list = Vec![BmiRange {
+        min: 0.0,
+        max: 18.5,
+        label: "低体重"
+    },];
 }
