@@ -35,5 +35,10 @@ fn main() {
             max: 40.0,
             label: "肥満3度"
         },
+        BmiRange {
+            min: 40.0,
+            max: 99.0,
+            label: "肥満4度"
+        },
     ];
 }
