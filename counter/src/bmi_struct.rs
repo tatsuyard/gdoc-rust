@@ -41,4 +41,5 @@ fn main() {
             label: "肥満4度"
         },
     ];
+    let mut result = "不明";
 }
