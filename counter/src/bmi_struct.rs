@@ -48,4 +48,5 @@ fn main() {
             break;
         }
     }
+    println!("BMI={:.1}, 判定={}", bmi, result);
 }
