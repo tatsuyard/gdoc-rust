@@ -50,3 +50,7 @@ fn main() {
     }
     println!("BMI={:.1}, 判定={}", bmi, result);
 }
+
+fn input(prompt: &str) -> f64 {
+    println!("{}", prompt);
+}
