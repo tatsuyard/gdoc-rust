@@ -53,4 +53,6 @@ fn main() {
 
 fn input(prompt: &str) -> f64 {
     println!("{}", prompt);
+    let mut s = String::new();
+    std::io::stdin().read_line(&mut s).expect("入力エラー");
 }
