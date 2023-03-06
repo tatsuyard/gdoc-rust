@@ -1,4 +1,5 @@
 fn main() {
     let s = "Hello";
-    println!("{}", s[0]);
+    let ch = s.chars().nth(0).unwrap();
+    println!("{}", ch);
 }
