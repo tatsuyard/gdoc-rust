@@ -5,4 +5,5 @@ fn main() {
     let ss2: &str = &so1;
     let ss3: &str = so1.as_str();
     println!("{}\n{}\n{}\n{}", so1, so2, ss2, ss3);
+    println!("{:p}\n{:p}", ss2, ss3);
 }
