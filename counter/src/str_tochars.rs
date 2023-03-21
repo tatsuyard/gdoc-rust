@@ -3,4 +3,5 @@ fn main() {
     for c in pr.chars() {
         print!("[{}]", c);
     }
+    println!("\n文字数={}字", pr.chars().count());
 }
