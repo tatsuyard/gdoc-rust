@@ -4,4 +4,6 @@ fn main() {
         print!("[{}]", c);
     }
     println!("\n文字数={}字", pr.chars().count());
+
+    let pr_chars: Vec<char> = pr.chars().collect();
 }
