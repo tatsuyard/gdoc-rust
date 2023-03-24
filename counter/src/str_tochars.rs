@@ -9,4 +9,5 @@ fn main() {
     for c in pr_chars() {
         print!("({})", c);
     }
+    println!("\n文字数={}字", pr_chars.len());
 }
