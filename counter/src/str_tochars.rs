@@ -1,3 +1,7 @@
+fn echo(s: &'static str) {
+    println!("{}", s);
+}
+
 fn main() {
     let pr = "窮鼠猫を噛む";
     for c in pr.chars() {
