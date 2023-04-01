@@ -7,5 +7,8 @@ fn hex_dmup(s: &str) {
         if i % 16 == 0 {
             print!("{:08x|", i);
         }
+        if i % 4 == 3 {
+            print!("{:02x}|", c);
+        }
     }
 }
