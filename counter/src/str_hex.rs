@@ -9,6 +9,8 @@ fn hex_dmup(s: &str) {
         }
         if i % 4 == 3 {
             print!("{:02x}|", c);
+        } else {
+            print!("{:02x}", c);
         }
     }
 }
