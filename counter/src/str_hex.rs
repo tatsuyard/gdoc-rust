@@ -12,5 +12,9 @@ fn hex_dmup(s: &str) {
         } else {
             print!("{:02x}", c);
         }
+        if i % 16 == 15 {
+            println!("");
+        }
     }
+    println!("");
 }
