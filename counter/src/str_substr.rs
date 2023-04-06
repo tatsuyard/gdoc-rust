@@ -9,4 +9,5 @@ fn main() {
         }
         break;
     }
+    println!("先頭2文字: {}", sub1);
 }
