@@ -10,4 +10,5 @@ fn main() {
         break;
     }
     println!("先頭2文字: {}", sub1);
+    let mut sub2 = String::new();
 }
