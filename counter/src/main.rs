@@ -1,7 +1,7 @@
 extern crate sysinfo;
 
 use std::cmp::Reverse;
-use sysinfo::{ProcessExt, ProcessorExt, System, SystemExt};
+use sysinfo::{System, SystemExt};
 
 fn main() {
     let mut system = System::new_all();
@@ -9,7 +9,7 @@ fn main() {
     loop {
         system.refresh_all();
 
-        let processes = system.get_process_list();
+        let processes = system.get_processes();
         let mut sorted_processes: Vec<_> = processes.values().collect();
         sorted_processes.sort_by_key(|p| Reverse(p.cpu_usage()));
 
