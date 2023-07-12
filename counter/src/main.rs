@@ -1,7 +1,4 @@
-extern crate sysinfo;
-
-use std::cmp::Reverse;
-use sysinfo::{System, SystemExt};
+use sysinfo::{ProcessExt, System, SystemExt};
 
 fn main() {
     let mut system = System::new_all();
